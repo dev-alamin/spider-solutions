@@ -7,6 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>spidersolutions</title>
 
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
   <link rel="stylesheet" href="/src/style.css" rel="stylesheet" />
 </head>
 
@@ -263,9 +270,6 @@
       <span class="font-semibold text-sm">Se flere resultater</span>
     </button>
   </section>
-
-
-
 
 
   <!-- Key Benefit section  -->
@@ -994,6 +998,200 @@
   </section>
   <!-- Testimonials Section Ends -->
 
+  <!-- Everyone should be satisfied  -->
+<section class="py-24 bg-[#FAF9F6] relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-12 text-center mb-20">
+    <h2 class="text-6xl font-serif text-gray-900 mb-8">Alle skal bli fornøyde!</h2>
+    <p class="max-w-3xl mx-auto text-gray-500 leading-relaxed mb-10 text-sm">
+      SPIDER løser utfordringer for alle ledd i hjemmetjenesten. Pleierne får tette, men lovlige og trygge planer. Planleggerne får mindre tidsbruk og bedre oversikt. Brukerne får kontinuitet og riktig kompetanse til riktig tid. Og ledelsen får bedre økonomi, styringsdata og kontroll. Når alt henger sammen, blir hverdagen bedre for alle.
+    </p>
+    <button class="bg-[#0c111d] text-white px-8 py-4 rounded-full inline-flex items-center gap-3 hover:bg-black transition-all group">
+      <div class="bg-white rounded-full p-1 group-hover:translate-x-1 transition-transform">
+        <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </div>
+      <span class="font-semibold text-sm">Book gratis demo</span>
+    </button>
+  </div>
+
+  <div class="max-w-5xl mx-auto relative min-h-[600px] flex items-center justify-center">
+    
+    <div class="absolute inset-0 opacity-20" 
+         style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 30px 30px;">
+    </div>
+
+    <div class="relative z-10 bg-white/60 backdrop-blur-md rounded-[48px] p-20 shadow-2xl shadow-gray-200/50 border border-white flex flex-col items-center">
+      <img src="/spider-logo-full.svg" alt="SPIDER Solutions" class="h-12 mb-2" />
+      <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-[1px] h-12 bg-gray-200"></div>
+      <div class="absolute -bottom-12 left-1/2 -translate-x-1/2 w-[1px] h-12 bg-gray-200"></div>
+      <div class="absolute top-1/2 -left-12 -translate-y-1/2 h-[1px] w-12 bg-gray-200"></div>
+      <div class="absolute top-1/2 -right-12 -translate-y-1/2 h-[1px] w-12 bg-gray-200"></div>
+    </div>
+
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center w-64 mb-4">
+        <p class="text-sm font-medium text-gray-700">Økonomi, oversikt & rapporter</p>
+      </div>
+      <div class="bg-white px-4 py-1.5 rounded-full border border-gray-100 shadow-sm flex items-center gap-2">
+        <span class="text-[11px] font-bold text-gray-800">Ledelsen</span>
+        <div class="w-4 h-4 bg-[#FFE587] rounded-full flex items-center justify-center">
+          <svg class="w-2.5 h-2.5 text-gray-700" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute left-0 top-1/2 -translate-y-1/2 flex items-center">
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center w-64 mr-4">
+        <p class="text-sm font-medium text-gray-700">Mindre tidsbruk og færre frustrasjoner</p>
+      </div>
+      <div class="bg-white px-4 py-1.5 rounded-full border border-gray-100 shadow-sm flex items-center gap-2">
+        <span class="text-[11px] font-bold text-gray-800">Planleggerne</span>
+        <div class="w-4 h-4 bg-[#FFE587] rounded-full flex items-center justify-center">
+          <svg class="w-2.5 h-2.5 text-gray-700" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute right-0 top-1/2 -translate-y-1/2 flex items-center flex-row-reverse">
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center w-64 ml-4">
+        <p class="text-sm font-medium text-gray-700">Tette, men gode og lovlige planer</p>
+      </div>
+      <div class="bg-white px-4 py-1.5 rounded-full border border-gray-100 shadow-sm flex items-center gap-2">
+        <span class="text-[11px] font-bold text-gray-800">Pleierne</span>
+        <div class="w-4 h-4 bg-[#FFE587] rounded-full flex items-center justify-center">
+          <svg class="w-2.5 h-2.5 text-gray-700" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col-reverse items-center">
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center w-64 mt-4">
+        <p class="text-sm font-medium text-gray-700">Kontinuitet, rett kompetanse til rett tid</p>
+      </div>
+      <div class="bg-white px-4 py-1.5 rounded-full border border-gray-100 shadow-sm flex items-center gap-2">
+        <span class="text-[11px] font-bold text-gray-800">Brukerne</span>
+        <div class="w-4 h-4 bg-[#FFE587] rounded-full flex items-center justify-center">
+          <svg class="w-2.5 h-2.5 text-gray-700" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+  <!-- Everyone should be satisfied Ends -->
+
+  <!-- Call to action  -->
+<section class="bg-[#FFE587] py-32 relative overflow-hidden text-center">
+  <div class="absolute inset-0 opacity-20 pointer-events-none">
+    <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <circle cx="50" cy="50" r="40" fill="none" stroke="black" stroke-width="0.1" />
+      <circle cx="50" cy="50" r="60" fill="none" stroke="black" stroke-width="0.1" />
+    </svg>
+  </div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-6">
+    <div class="inline-block bg-white px-4 py-1.5 rounded-lg shadow-sm mb-8">
+      <span class="text-[12px] italic font-serif text-gray-800">Interessert?</span>
+    </div>
+    
+    <h2 class="text-6xl font-serif text-gray-900 leading-tight mb-8">
+      Se hvordan SPIDER kan forbedre planleggingen i din kommune
+    </h2>
+    
+    <p class="text-gray-700 text-sm max-w-2xl mx-auto leading-relaxed mb-12">
+      Vi viser hvordan planene bygges, hvordan kompetanse styres og hvordan SPIDER leverer optimaliserte ruter på minutter - på verdensrekordnivå.
+    </p>
+
+    <button class="bg-[#0c111d] text-white px-10 py-5 rounded-full inline-flex items-center gap-3 hover:bg-black transition-all group">
+      <span class="font-bold text-sm">Book gratis demo</span>
+    </button>
+  </div>
+</section>
+  <!-- Call to action Section ends  -->
+
+  <!-- Footer statrs  -->
+<footer class="bg-[#F3F6FB] pt-24 pb-12 border-t border-gray-100 font-sans">
+  <div class="max-w-7xl mx-auto px-12">
+    
+    <div class="mb-16">
+      <img src="/spider-logo-full.svg" alt="SPIDER Solutions" class="h-10 opacity-90" />
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
+      <div class="lg:col-span-5 space-y-8">
+        <p class="text-[#667085] text-[15px] leading-relaxed max-w-sm">
+          Hjemmetjenesten er kompleks: kompetansekrav, tidsvinduer, pauser, kontinuitet og store variasjoner gjennom dagen.
+        </p>
+        
+        <div class="space-y-3">
+          <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-white shadow-sm flex items-center gap-4 transition-all hover:shadow-md">
+            <div class="w-10 h-10 bg-[#FFE587] rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+            </div>
+            <span class="text-[15px] font-medium text-gray-800">+47 41.21.44.57</span>
+          </div>
+
+          <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-white shadow-sm flex items-center gap-4 transition-all hover:shadow-md">
+            <div class="w-10 h-10 bg-[#FFE587] rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <span class="text-[15px] font-medium text-gray-800">info@spidersolutions.no</span>
+          </div>
+
+          <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-white shadow-sm flex items-center gap-4 transition-all hover:shadow-md">
+            <div class="w-10 h-10 bg-[#FFE587] rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <span class="text-[15px] font-medium text-gray-800">Gaustadalléen 21, 0349 Oslo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="flex flex-col gap-5">
+          <a href="#" class="text-[15px] text-[#475467] hover:text-black transition-colors">Om SPIDER</a>
+          <a href="#" class="text-[15px] text-[#475467] hover:text-black transition-colors">Funksjonalitet</a>
+          <a href="#" class="text-[15px] text-[#475467] hover:text-black transition-colors">Nytte</a>
+          <a href="#" class="text-[15px] text-[#475467] hover:text-black transition-colors">Verdensrekorder</a>
+          <a href="#" class="text-[15px] text-[#475467] hover:text-black transition-colors">Teknologi</a>
+          <a href="#" class="text-[15px] font-bold text-gray-900 hover:underline">Kontakt oss</a>
+          <a href="#" class="text-[15px] text-[#475467] hover:text-black transition-colors">Transportbransjen</a>
+        </div>
+        
+        <div class="flex flex-col gap-5">
+          <a href="#" class="text-[15px] text-[#475467] hover:text-black transition-colors">Cookies</a>
+          <a href="#" class="text-[15px] text-[#475467] hover:text-black transition-colors">Personvernserklæring</a>
+          <a href="#" class="text-[15px] text-[#475467] hover:text-black transition-colors">Terms of service</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-10 border-t border-gray-200/60 flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="flex gap-4">
+        <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm text-gray-900 hover:scale-110 transition-transform">
+          <i class="fab fa-linkedin-in text-[14px]"></i>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm text-gray-900 hover:scale-110 transition-transform">
+          <i class="fab fa-instagram text-[14px]"></i>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm text-gray-900 hover:scale-110 transition-transform">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm text-gray-900 hover:scale-110 transition-transform">
+          <i class="fab fa-facebook-f text-[14px]"></i>
+        </a>
+      </div>
+      
+      <p class="text-[13px] text-[#98A2B3]">© 2025 Spider. Alle rettigheter reservert.</p>
+    </div>
+  </div>
+</footer>
+  <!-- Footer ends  -->
   <script type="module" src="/src/main.js"></script>
 </body>
 

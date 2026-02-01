@@ -1,5 +1,7 @@
-import Swiper from 'swiper';
-import 'swiper/css/bundle';
+// import Swiper from 'swiper';
+// import 'swiper/css/bundle';
+
+import Lenis from 'lenis'
 
 import Alpine from 'alpinejs'
 window.Alpine = Alpine
@@ -41,10 +43,18 @@ document.addEventListener("DOMContentLoaded", () => {
     spaceBetween: 30,
     grabCursor: true,
     loop: false, // Recommended to keep "left edge" logic simple
+    // vertical scroll
+    mousewheel:true,
+    freeMode:true,
     navigation: {
       nextEl: '.swiper-next-btn',
       prevEl: '.swiper-prev-btn',
     },
+      autoplay: {
+    delay: 3000, // 3 seconds
+    disableOnInteraction: false, // Continue after interaction
+  },
+  speed:1000,
     breakpoints: {
       768: {
         slidesPerView: 2.2,
@@ -54,4 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
+});
+
+const lenis = new Lenis({
+  autoRaf: true,
+  lerp: 0.08,
 });
