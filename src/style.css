@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+.font-serif {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.section-divider {
+  @apply w-full h-[1px] bg-gradient-to-r from-transparent via-gray-200 to-transparent my-16;
+}
+
+/* Add this to your styles */
+.testimonial-swiper {
+  overflow: visible !important; /* Allows the slides to bleed into the margins */
+}
+
+.testimonial-card {
+  min-height: 480px; /* Forces equal height and matches Figma proportions */
+  display: flex;
+  flex-col: column;
+}
+
+/* Ensure the grayscale filter matches the Figma avatars */
+.avatar-grayscale {
+  filter: grayscale(100%);
+  opacity: 0.8;
+}
