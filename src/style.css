@@ -1,12 +1,15 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+body {
+  background-color: #F9F5F3;
+}
 
 .font-serif {
   font-family: 'Libre Baskerville', serif;
 }
 
 .section-divider {
-  @apply w-full h-[1px] bg-gradient-to-r from-transparent via-gray-200 to-transparent my-16;
+  /* @apply w-full h-[1px] bg-gradient-to-r from-transparent via-gray-200 to-transparent my-16; */
 }
 
 /* Add this to your styles */
@@ -24,4 +27,27 @@
 .avatar-grayscale {
   filter: grayscale(100%);
   opacity: 0.8;
+}
+
+.glow-blob {
+    position: absolute;
+    width: 60vw;
+    height: 120vw;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.yellow-glow {
+    background: radial-gradient(circle, #f7dc72 0%, rgba(255, 255, 255, 0) 100%);
+    top: -10%;
+    left: -20%;
+}
+
+.blue-glow {
+    background: radial-gradient(circle, #88b9fa 0%, rgba(255, 255, 255, 0) 70%);
+    top: -50%;
+    right: -30%;
 }

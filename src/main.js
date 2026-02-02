@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
       delay: 3000, // 3 seconds
       disableOnInteraction: false, // Continue after interaction
     },
-    speed: 1000,
+    speed: 500,
     breakpoints: {
       768: {
         slidesPerView: 2.2,
