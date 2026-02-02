@@ -1,7 +1,6 @@
 // import Swiper from 'swiper';
 // import 'swiper/css/bundle';
-
-import Lenis from 'lenis'
+import {initGSAPAnimations} from './scripts/animation'
 
 import Alpine from 'alpinejs'
 window.Alpine = Alpine
@@ -73,6 +72,9 @@ document.addEventListener('alpine:init', () => {
 Alpine.start();
 
 document.addEventListener("DOMContentLoaded", () => {
+  
+  initGSAPAnimations();
+
   new Swiper('.testimonial-swiper', {
     slidesPerView: 1.1, // Shows a piece of the next slide on mobile
     spaceBetween: 30,
@@ -84,10 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
       nextEl: '.swiper-next-btn',
       prevEl: '.swiper-prev-btn',
     },
-    autoplay: {
-      delay: 3000, // 3 seconds
-      disableOnInteraction: false, // Continue after interaction
-    },
+    // autoplay: {
+    //   delay: 3000, // 3 seconds
+    //   disableOnInteraction: false, // Continue after interaction
+    // },
     speed: 500,
     breakpoints: {
       768: {
@@ -98,9 +100,4 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
-});
-
-const lenis = new Lenis({
-  autoRaf: true,
-  lerp: 0.08,
 });
