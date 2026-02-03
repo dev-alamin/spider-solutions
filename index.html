@@ -564,15 +564,20 @@
     </button>
   </section>
 
-  <section
+  <section x-data="spiderSolutionFAQ"
     class="container mx-auto px-4 md:px-12 pb-8 md:pb-16 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-16 items-center">
 
-    <div class="spider__image-reveal relative md:h-[600px] w-full rounded-[20px] overflow-hidden">
-      <img src="/images/technology-section-main.png" alt="Care worker with elderly patient"
+    <div class="relative spider__image-reveal md:h-[600px] w-full rounded-[20px] overflow-hidden">
+      <!-- <img src="/images/technology-section-main.png" alt="Care worker with elderly patient"
         class="w-full h-full object-cover spider__image-magnetic-animation" />
+         -->
+
+      <img :src="openIndex !== null ? faqData[openIndex].image : '/images/technology-section-main.png'"
+        alt="Technology visual" class="w-full h-full object-cover spider__image-magnetic-animation" />
+
     </div>
 
-    <div class="space-y-4 reveal-faq-lis" x-data="spiderSolutionFAQ">
+    <div class="space-y-4 reveal-faq-lis">
       <template x-for="(item, index) in faqData" :key="index">
         <div class="faq-item">
           <div x-show="openIndex !== index" @click="openIndex = index"
