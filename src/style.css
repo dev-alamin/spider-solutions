@@ -29,6 +29,7 @@ body {
   opacity: 0.8;
 }
 
+/* Homepage first two section  */
 .glow-blob {
     position: absolute;
     width: 60vw;
@@ -50,6 +51,40 @@ body {
     background: radial-gradient(circle, #88b9fa 0%, rgba(255, 255, 255, 0) 70%);
     top: -50%;
     right: -30%;
+}
+
+/* Key benefit section left blue glow  */
+.key-benefit-blue-glow-left {
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.4;
+    top: 30%;
+    left: -20%;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(circle, #88b9fa 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+/* Benefit, technology right yello glow  */
+.spider-benefit-technology-glow-right{
+    position: absolute;
+    width: 50vw;
+    height: 150vh;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.4;
+    top: 20%;
+    right: -20%;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(circle, #f7dc72 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.key-benefit-blue-glow-left.technology {
+  top: 10%;
 }
 
 @keyframes spider-float {

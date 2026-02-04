@@ -1,0 +1,1443 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spidersolutions</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="/src/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <!-- First Two section e.g hero and result -->
+    <div class="page-wrapper" style="position: relative; overflow: hidden;">
+        <div class="glow-blob yellow-glow"></div>
+        <div class="glow-blob blue-glow"></div>
+
+        <div class="md:min-h-screen">
+
+            <nav class="container flex items-center justify-between px-12 py-6 mx-auto">
+                <div class="flex items-center gap-2">
+                    <a href="/">
+                        <img src="/images/main-logo-dark.svg" alt="SPIDER Solutions" class="h-8" />
+                    </a>
+                    <!-- <span class="font-bold tracking-widest text-xl">SPIDER</span> -->
+                </div>
+
+                <div
+                    class="hidden md:flex items-center gap-2 bg-white/60 backdrop-blur-md p-2 rounded-full border border-gray-100 shadow-sm">
+                    <a href="#"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Hjem</a>
+                    <a href="#"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Om
+                        SPIDER</a>
+                    <a href="#"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Funksjonalitet</a>
+                    <a href="#"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Nytte</a>
+                    <a href="#"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Teknologi</a>
+                </div>
+
+                <a href="#"
+                    class="px-8 py-4 rounded-full bg-white text-black text-sm shadow-sm hover:bg-spider-dark hover:text-black transition-all">Kontakt
+                    oss</a>
+            </nav>
+
+            <section class="relative w-full py-20 overflow-hidden">
+
+                <div class="absolute inset-0 opacity-40 pointer-events-none">
+                    <img src="/public/images/map-bg.png" alt="Background Map"
+                        class="w-full h-full object-cover object-center scale-110">
+                </div>
+
+
+                <div class="container mx-auto px-6 relative z-10">
+                    <div class="md:flex md:gap-16">
+                        <div class="mb-12 max-w-3xl">
+                            <h2 class="text-5xl md:text-6xl font-serif text-[#1a1a1a] leading-tight tracking-tight">
+                                Når planlegging gir <br> målbare resultater
+                            </h2>
+                        </div>
+
+                        <div class="relative mt-8 md:ml-8" x-data="{ show: true }">
+
+                            <div
+                                class="absolute -top-10 left-[48%] transform -translate-x-1/2 flex items-center justify-center">
+                                <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
+                                    <div class="w-4 h-4 bg-yellow-400 rounded-full animate-pulse shadow-sm"></div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="ml-auto mr-0 md:mr-20 max-w-md bg-white backdrop-blur-sm p-8 md:p-10 rounded-2xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)]">
+                                <div class="space-y-6">
+                                    <p class="text-[15px] leading-relaxed text-[#1a1a1a]">
+                                        <span class="font-bold">SPIDER</span> brukes daglig i norske kommuner – og
+                                        effektene er dokumentert.
+                                        <br>
+                                        <br>
+                                    </p>
+                                    <p class="text-[15px] leading-relaxed text-[#555555]">
+                                        Mindre kjøring, bedre kontinuitet, høyere kvalitet i tjenesten og mer tid hos
+                                        pasientene. Dette er ikke estimater eller antakelser, men målbare resultater
+                                        observert i reell drift.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10 mt-32">
+
+                        <div class="lg:col-span-5 flex flex-col justify-center">
+                            <h2 class="text-[52px] leading-[1.1] font-serif text-[#1a1a1a] mb-8">
+                                Resultater som <br /> faktisk utgjør en <br /> forskjell
+                            </h2>
+                            <p class="text-[17px] text-gray-600 leading-relaxed max-w-md mb-10">
+                                Når komplekse krav håndteres automatisk og korrekt, gir det tydelige forbedringer i både
+                                effektivitet, kvalitet og ressursutnyttelse. Resultatene under viser hva kommuner oppnår
+                                når planleggingen gjøres riktig – hver dag.
+                            </p>
+
+                            <button
+                                class="group w-fit flex items-center gap-4 bg-[#0d0d0d] text-white pl-2 pr-8 py-2 rounded-full hover:bg-black/90 transition-all">
+                                <div
+                                    class="bg-white rounded-full p-2 text-black group-hover:translate-x-1 transition-transform">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="3" stroke="currentColor" class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                    </svg>
+                                </div>
+                                <span class="font-medium">Book gratis demo</span>
+                            </button>
+                        </div>
+
+                        <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-6 items-start" x-data="{}">
+
+                            <div
+                                class="bg-white p-8 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-white flex flex-col justify-between min-h-[200px] transform">
+
+                                <div class="flex justify-end">
+                                    <span class="bg-orange-100 text-orange-500 p-2 rounded-full rotate-45">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3"
+                                            viewBox="0 0 24 24">
+                                            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div>
+                                    <div class="text-[42px] font-light font-serif text-[#1a1a1a]">-26.7%</div>
+                                    <p class="text-[13px] text-gray-500 mt-2 uppercase tracking-tight">Reduksjon i
+                                        kjørte kilometer</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white p-8 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-white flex flex-col justify-between min-h-[200px] transform">
+                                <div class="flex justify-end">
+                                    <span class="bg-orange-100 text-orange-500 p-2 rounded-full rotate-45">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3"
+                                            viewBox="0 0 24 24">
+                                            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div>
+                                    <div class="text-[42px] font-light font-serif text-[#1a1a1a]">-34.1%</div>
+                                    <p class="text-[13px] text-gray-500 mt-2 uppercase tracking-tight">Færre pleierskift
+                                        per pasient</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white p-8 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-white flex flex-col justify-between min-h-[200px] transform">
+                                <div class="flex justify-end">
+                                    <span class="bg-green-100 text-green-500 p-2 rounded-full -rotate-45">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3"
+                                            viewBox="0 0 24 24">
+                                            <path d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div>
+                                    <div class="text-[42px] font-light font-serif text-[#1a1a1a]">+107.7%</div>
+                                    <p class="text-[13px] text-gray-500 mt-2 uppercase tracking-tight">Flere besøk
+                                        utført av ansvarlig pleier</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white p-8 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-white flex flex-col justify-between min-h-[200px] transform">
+                                <div class="flex justify-end">
+                                    <span class="bg-green-100 text-green-500 p-2 rounded-full -rotate-45">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3"
+                                            viewBox="0 0 24 24">
+                                            <path d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div>
+                                    <div class="text-[42px] font-light font-serif text-[#1a1a1a]">+107.7%</div>
+                                    <p class="text-[13px] text-gray-500 mt-2 uppercase tracking-tight">Flere besøk
+                                        utført av ansvarlig pleier</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white p-8 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-white flex flex-col justify-between min-h-[200px] transform">
+                                <div class="flex justify-end">
+                                    <span class="bg-green-100 text-green-500 p-2 rounded-full -rotate-45">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3"
+                                            viewBox="0 0 24 24">
+                                            <path d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div>
+                                    <div class="text-[42px] font-light font-serif text-[#1a1a1a]">+107.7%</div>
+                                    <p class="text-[13px] text-gray-500 mt-2 uppercase tracking-tight">Flere besøk
+                                        utført av ansvarlig pleier</p>
+                                </div>
+                            </div>
+
+                            <div class="hidden md:flex"> </div>
+
+                            <div
+                                class="bg-white p-8 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-white flex flex-col justify-between min-h-[200px] transform">
+                                <div class="flex justify-end">
+                                    <span class="bg-green-100 text-green-500 p-2 rounded-full -rotate-45">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3"
+                                            viewBox="0 0 24 24">
+                                            <path d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div>
+                                    <div class="text-[42px] font-light font-serif text-[#1a1a1a]">+107.7%</div>
+                                    <p class="text-[13px] text-gray-500 mt-2 uppercase tracking-tight">Flere besøk
+                                        utført av ansvarlig pleier</p>
+                                </div>
+                            </div>
+
+                            <div class="hidden md:flex"> </div>
+
+                            <div
+                                class="bg-white p-8 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-white flex flex-col justify-between min-h-[200px] transform">
+                                <div class="flex justify-end">
+                                    <span class="bg-green-100 text-green-500 p-2 rounded-full -rotate-45">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3"
+                                            viewBox="0 0 24 24">
+                                            <path d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div>
+                                    <div class="text-[42px] font-light font-serif text-[#1a1a1a]">+107.7%</div>
+                                    <p class="text-[13px] text-gray-500 mt-2 uppercase tracking-tight">Flere besøk
+                                        utført av ansvarlig pleier</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <div class="relative flex items-center justify-center container mx-auto px-12 mt-20">
+            <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                <div class="w-full border-t border-[#DBD1CF]"></div>
+            </div>
+            <div class="relative">
+                <span class="bg-[#E8E2E1] italic px-6 py-3 rounded-md text-[11px] tracking-[0.2em] shadow-sm">
+                    Resultater
+                </span>
+            </div>
+        </div>
+
+        <section class="container mx-auto px-6 py-24 text-center">
+
+            <div class="space-y-2 mb-20">
+                <h2 class="text-3xl md:text-4xl font-serif text-[#1F2937] line-through">Har du råd til å bruke SPIDER?
+                </h2>
+                <h2 class="reveal-type text-3xl md:text-4xl font-serif text-[#1F2937]">Har du råd til å <span
+                        class="italic">ikke</span>
+                    bruke
+                    SPIDER?</h2>
+            </div>
+
+            <div class="hidden md:flex relative w-full container mx-auto h-20 mb-0">
+                <div
+                    class="absolute left-1/2 top-0 -translate-x-1/2 w-4 h-4 rounded-full bg-[#E5E7EB] border-[3px] border-white shadow-sm z-10">
+                </div>
+
+                <svg class="w-full h-full text-[#E5E7EB]" preserveAspectRatio="none" viewBox="0 0 1000 100">
+                    <path d="M500 10 V 50 H 125 V 100 M 500 50 H 375 V 100 M 500 50 H 625 V 100 M 500 50 H 875 V 100"
+                        fill="none" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+            </div>
+
+            <div class="reveal-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div
+                    class="reveal-card bg-white rounded-3xl p-8 text-left shadow-2xl shadow-gray-300 border border-gray-50 relative">
+                    <div class="absolute top-6 right-6 bg-[#FEE2E2] p-2 rounded-full">
+                        <svg class="w-5 h-5 text-[#EF4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="text-3xl md:text-5xl font-serif text-[#111827] mt-6 md:mt-12 mb-4">-26,7%</div>
+                    <p class="text-[#6B7280] leading-relaxed">Kjørte kilometer redusert</p>
+                </div>
+
+                <div
+                    class="reveal-card bg-white rounded-3xl p-8 text-left shadow-2xl shadow-gray-300 border border-gray-50 relative">
+                    <div class="absolute top-6 right-6 bg-[#FEE2E2] p-2 rounded-full">
+                        <svg class="w-5 h-5 text-[#EF4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="text-3xl md:text-5xl font-serif text-[#111827] mt-6 md:mt-12 mb-4">-34,1%</div>
+                    <p class="text-[#6B7280] leading-relaxed">Færre bytter av pleier hos samme pasient</p>
+                </div>
+
+                <div
+                    class="reveal-card bg-white rounded-3xl p-8 text-left shadow-2xl shadow-gray-300 border border-gray-50 relative">
+                    <div class="absolute top-6 right-6 bg-[#DCFCE7] p-2 rounded-full">
+                        <svg class="w-5 h-5 text-[#22C55E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="text-3xl md:text-5xl font-serif text-[#111827] mt-6 md:mt-12 mb-4">+107,7%</div>
+                    <p class="text-[#6B7280] leading-relaxed">Flere besøk utført av ansvarlig pleier</p>
+                </div>
+
+                <div
+                    class="reveal-card bg-white rounded-3xl p-8 text-left shadow-2xl shadow-gray-300 border border-gray-50 relative">
+                    <div class="absolute top-6 right-6 bg-[#DCFCE7] p-2 rounded-full">
+                        <svg class="w-5 h-5 text-[#22C55E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="text-3xl md:text-5xl font-serif text-[#111827] mt-6 md:mt-12 mb-4">12-15%</div>
+                    <p class="text-[#6B7280] leading-relaxed">Frigjort pleiertid hver dag – uten strukturelle endringer
+                    </p>
+                </div>
+            </div>
+
+            <button
+                class="bg-[#0c111d] text-white px-8 py-4 rounded-full inline-flex items-center gap-3 hover:bg-black transition-all group">
+                <div class="bg-white rounded-full p-1 group-hover:translate-x-1 transition-transform">
+                    <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </div>
+                <span class="font-semibold text-sm">Se flere resultater</span>
+            </button>
+        </section>
+
+
+    </div>
+    <!-- First Two section e.g hero and result -->
+
+    <!-- Use glow effect for key benefits and technology section -->
+    <div class="relative overflow-hidden">
+        <div class="spider-benefit-technology-glow-right"></div>
+        <!-- Key Benefit section  -->
+        <div class="relative flex items-center justify-center container mx-auto px-12 mt-20">
+            <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                <div class="w-full border-t border-gray-200/60"></div>
+            </div>
+            <div class="relative">
+                <span
+                    class="bg-white px-4 py-1.5 rounded-md text-[11px] font-bold tracking-[0.2em] uppercase text-gray-400 border border-gray-100 shadow-sm">
+                    Nøkkelfordeler
+                </span>
+            </div>
+        </div>
+
+        <section class="relative container mx-auto px-4 md:px-12 py-20">
+            <div class="key-benefit-blue-glow-left"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+                <h2 class="reveal-type text-5xl font-serif leading-tight text-gray-900">
+                    Planlegging som gir mer tid, bedre kvalitet og lavere belastning
+                </h2>
+                <div class="reveal-text lg:pl-12 lg:border-l border-gray-200">
+                    <p class="text-gray-500 leading-relaxed text-sm">
+                        Hjemmetjenesten er kompleks: kompetansekrav, tidsvinduer, pauser, kontinuitet og store
+                        variasjoner gjennom
+                        dagen. SPIDER automatiserer alt dette, og leverer planer som både pleiere, planleggere og
+                        pasienter merker
+                        forskjellen på – allerede første uke.
+                    </p>
+                </div>
+            </div>
+
+            <div class="reveal-grid grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                <div
+                    class="reveal-card lg:col-span-1 lg:row-span-2 bg-white rounded-[32px] p-4 md:p-8 shadow-2xl shadow-gray-200 border border-gray-50 flex flex-col h-full">
+                    <div
+                        class="bg-[#EEF2FF] rounded-2xl h-80 w-full mb-8 relative overflow-hidden border border-blue-50">
+                        <img src="/images/benefit-first-block.svg" alt="Map route"
+                            class="w-full h-full object-cover opacity-60" />
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-4 py-2 rounded-lg shadow-md text-[10px] font-bold">
+                            Pasient</div>
+                    </div>
+
+                    <div class="bg-[#F9F5F3] w-10 h-10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-4">Mindre kjøring, mer tid hos pasientene</h3>
+                    <div class="w-12 h-[1px] bg-gray-200 mb-6"></div>
+                    <p class="text-sm text-gray-500 leading-relaxed mb-8">
+                        SPIDER finner optimal rekkefølge på besøkene og reduserer unødvendig kjøring. Det gir mer tid
+                        til
+                        pasientoppfølging og mindre stress i hverdagen.
+                    </p>
+                    <button
+                        class="mt-auto flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 bg-[#F9F5F3] w-fit px-4 py-2 rounded-full hover:bg-gray-100 transition-colors">
+                        <span
+                            class="bg-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] shadow-sm">›</span>
+                        Les mer
+                    </button>
+                </div>
+
+                <div
+                    class="reveal-card bg-white rounded-[32px] p-4 md:p-8 shadow-2xl shadow-gray-200 border border-gray-50 flex flex-col">
+                    <div class="bg-[#F8F9FA] w-10 h-10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-serif mb-4 leading-tight">Planlegging på minutter, ikke timer</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed mb-8">
+                        SPIDER regner gjennom enorme kombinasjoner og leverer ferdige planer raskt, selv når dagen
+                        endrer seg.
+                    </p>
+                    <button
+                        class="mt-auto flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 bg-[#F9F5F3] w-fit px-4 py-2 rounded-full">
+                        <span
+                            class="bg-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] shadow-sm">›</span>
+                        Les mer
+                    </button>
+                </div>
+
+                <div
+                    class="reveal-card bg-white rounded-[32px] p-4 md:p-8 shadow-2xl shadow-gray-200 border border-gray-50 flex flex-col">
+                    <div class="bg-[#F9F5F3] w-10 h-10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.382-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-serif mb-4 leading-tight">Bedre kontinuitet og kvalitet i tjenesten</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed mb-8">
+                        SPIDER sikrer samme pleier når det er viktig, håndterer pauser riktig og gir bedre flyt i
+                        tjenesten.
+                    </p>
+                    <button
+                        class="mt-auto flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 bg-[#F9F5F3] w-fit px-4 py-2 rounded-full">
+                        <span
+                            class="bg-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] shadow-sm">›</span>
+                        Les mer
+                    </button>
+                </div>
+
+                <div
+                    class="reveal-card bg-white rounded-[32px] p-4 md:p-8 shadow-2xl shadow-gray-200 border border-gray-50 flex flex-col">
+                    <div class="bg-[#F9F5F3] w-10 h-10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-serif mb-4 leading-tight">Riktig kompetanse på riktig oppdrag</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed mb-8">
+                        Systemet matcher oppdrag mot kompetansekrav, tilgjengelighet og regler. Du får kvalitet og
+                        trygghet.
+                    </p>
+                    <button
+                        class="mt-auto flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 bg-[#F9F5F3] w-fit px-4 py-2 rounded-full">
+                        <span
+                            class="bg-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] shadow-sm">›</span>
+                        Les mer
+                    </button>
+                </div>
+
+                <div
+                    class="reveal-card bg-white rounded-[32px] p-4 md:p-8 shadow-2xl shadow-gray-200 border border-gray-50 flex flex-col">
+                    <div
+                        class="bg-[#F9F5F3] w-10 h-10 rounded-xl flex items-center justify-center mb-6 text-gray-400 text-xl font-bold italic">
+                        ✱
+                    </div>
+                    <h3 class="text-xl font-serif mb-4 leading-tight">Dokumenterbar toppoptimalisering</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed mb-8">
+                        SPIDER leverer dokumentert svært høy optimaliseringskvalitet også på komplekse planer.
+                    </p>
+                    <button
+                        class="mt-auto flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 bg-gray-50 w-fit px-4 py-2 rounded-full">
+                        <span
+                            class="bg-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] shadow-sm">›</span>
+                        Les mer
+                    </button>
+                </div>
+
+            </div>
+        </section>
+        <!-- Key Benefit section Ends  -->
+
+
+        <!-- Functionlities section  -->
+        <div class="relative flex items-center justify-center container mx-auto px-4 mt-12 md:px-12 md:mt-32">
+            <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                <div class="w-full border-t border-gray-200/60"></div>
+            </div>
+        </div>
+
+        <section x-data="functionalityFilter" class="container mx-auto px-6 py-16 text-center">
+            <div class="mb-12">
+                <!-- <span class="reveal-type bg-[#EAE8E4] px-6 py-2 rounded font-serif italic text-gray-600">Hvorfor SPIDER?</span> -->
+                <span
+                    class="bg-[#E8E2E1] italic px-6 py-3 rounded-md text-[11px] tracking-[0.2em] shadow-sm inline-block">
+                    Hvorfor SPIDER?
+                </span>
+            </div>
+            <h2 class="reveal-type text-3xl md:text-5xl font-serif text-gray-900 mb-8 md:mt-6">Funksjonalitet uten
+                grenser</h2>
+            <div class="reveal-text">
+                <p class="max-w-3xl mx-auto text-gray-500 leading-relaxed mb-16 text-sm">
+                    SPIDER er utviklet tett sammen med over 1000 brukere i hjemmetjenesten – og alle viktige ønsker fra
+                    kommunene
+                    er
+                    implementert. Resultatet er et system med hundrevis av funksjoner som dekker hele virkeligheten i
+                    hjemmetjenesten.
+                </p>
+            </div>
+
+            <div
+                class="max-w-6xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-100 p-2 flex flex-wrap md:flex-nowrap items-center justify-between gap-2 mb-12">
+                <template x-for="category in categories" :key="category">
+                    <button @click="activeTab = category"
+                        class="flex-1 py-4 px-6 font-medium rounded-xl text-sm transition-all duration-300"
+                        :class="activeTab === category ? 'bg-[#FFE587] text-gray-900 shadow-sm' : 'text-gray-500 hover:bg-gray-50'"
+                        x-text="category">
+                    </button>
+                </template>
+            </div>
+
+            <div class="max-w-5xl mx-auto flex flex-wrap justify-center gap-3 mb-20">
+                <template x-for="tag in tags[activeTab]" :key="tag">
+                    <div x-show="activeTab" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform scale-95"
+                        x-transition:enter-end="opacity-100 transform scale-100"
+                        class="bg-white px-6 py-3 rounded-xl shadow-sm border border-gray-100 text-sm text-gray-700 hover:border-[#FFE587] transition-colors cursor-default"
+                        x-text="tag">
+                    </div>
+                </template>
+            </div>
+
+            <div class="flex flex-col items-center gap-8">
+                <div
+                    class="w-10 h-10 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center animate-bounce">
+                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <div class="flex gap-1.5">
+                        <div class="w-1.5 h-1.5 rotate-45 border border-gray-300"></div>
+                        <div class="w-1.5 h-1.5 rotate-45 bg-gray-300"></div>
+                        <div class="w-1.5 h-1.5 rotate-45 border border-gray-300"></div>
+                    </div>
+                    <span
+                        class="bg-[#EAE8E4] px-6 py-2 rounded-lg text-[12px] font-serif italic text-gray-700 tracking-wide">
+                        SPIDER er unik på flere områder
+                    </span>
+                    <div class="flex gap-1.5">
+                        <div class="w-1.5 h-1.5 rotate-45 border border-gray-300"></div>
+                        <div class="w-1.5 h-1.5 rotate-45 bg-gray-300"></div>
+                        <div class="w-1.5 h-1.5 rotate-45 border border-gray-300"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Functionalities section Ends -->
+    </div>
+    <!-- Use glow effect for key benefits and technology section ends  -->
+
+    <div class="relative overflow-hidden">
+        <div class="key-benefit-blue-glow-left technology"></div>
+        <div class="spider-benefit-technology-glow-right"></div>
+
+        <section class="container mx-auto px-6 py-20 text-center">
+
+            <h2 class="reveal-type text-3xl md:text-5xl font-serif text-gray-900 mb-6">Teknologi som matcher
+                virkeligheten</h2>
+            <div class="reveal-text">
+                <p class="max-w-3xl mx-auto text-gray-500 text-sm leading-relaxed mb-10">
+                    SPIDER håndterer alle detaljene som avgjør kvaliteten i en arbeidsliste: riktig kompetanse på riktig
+                    oppdrag,
+                    kontinuitet for pasientene, færre pleierskift og fleksible regler som tilpasses hver kommune. Alt
+                    optimalisert
+                    på
+                    minutter – ikke timer.
+                </p>
+            </div>
+
+            <button
+                class="bg-[#0c111d] text-white px-8 py-4 rounded-full inline-flex items-center gap-3 hover:bg-black transition-all group mb-20">
+                <div class="bg-white rounded-full p-1 group-hover:translate-x-1 transition-transform">
+                    <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </div>
+                <span class="font-semibold text-sm">Utforsk alle funksjoner</span>
+            </button>
+        </section>
+        <section x-data="spiderSolutionFAQ"
+            class="container mx-auto px-4 md:px-12 pb-8 md:pb-16 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-16 items-center">
+
+            <div class="relative spider__image-reveal md:h-[600px] w-full rounded-[20px] overflow-hidden">
+                <!-- <img src="/images/technology-section-main.png" alt="Care worker with elderly patient"
+        class="w-full h-full object-cover spider__image-magnetic-animation" />
+         -->
+
+                <img :src="openIndex !== null ? faqData[openIndex].image : '/images/technology-section-main.png'"
+                    alt="Technology visual" class="w-full h-full object-cover spider__image-magnetic-animation" />
+
+            </div>
+
+            <div class="space-y-4 reveal-faq-lis">
+                <template x-for="(item, index) in faqData" :key="index">
+                    <div class="faq-item">
+                        <div x-show="openIndex !== index" @click="openIndex = index"
+                            class="flex items-center gap-4 py-6 border-b border-[#DBD6D3] cursor-pointer hover:bg-gray-50/50 transition-colors group">
+                            <div
+                                class="w-8 h-8 rounded-full flex items-center justify-center text-black font-bold group-hover:border-gray-400 bg-white p-4 text-xl transition-all">
+                                +
+                            </div>
+                            <h3 class="text-lg font-medium text-gray-800" x-text="item.title"></h3>
+                        </div>
+
+                        <div x-show="openIndex === index" x-transition:enter="transition ease-out duration-300"
+                            x-transition:enter-start="opacity-0 transform scale-95"
+                            x-transition:enter-end="opacity-100 transform scale-100"
+                            class="bg-[#E8E2E180] rounded-[32px] p-8 relative overflow-hidden my-4 border border-[#E8E2E1]">
+                            <div @click="openIndex = null"
+                                class="absolute top-8 right-8 bg-white w-10 h-10 rounded-full shadow-sm flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
+                                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+
+                            <h3 class="text-xl font-medium mb-4 pr-12 text-gray-900" x-text="item.title"></h3>
+                            <p class="text-gray-600 text-sm leading-relaxed max-w-[85%]" x-text="item.content"></p>
+
+                            <div
+                                class="mt-6 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                                <span class="w-1.5 h-1.5 bg-gray-300 rotate-45"></span>
+                                Aktivt fokus
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </section>
+    </div>
+    <!-- Technology section ends  -->
+
+    <!-- Testimonials Section -->
+    <section class="py-24 overflow-hidden bg-[#F1ECEA]">
+        <div class="container mx-auto px-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+                <h2 class="reveal-type text-3xl md:text-5xl font-serif leading-tight text-gray-900 max-w-xl">
+                    Ikke hør på oss, hør på de som bruker oss.
+                </h2>
+
+                <div class="flex gap-3">
+                    <button
+                        class="swiper-prev-btn w-[100px] h-14 bg-white rounded-full flex items-center justify-center hover:bg-gray-50 transition-all active:scale-95">
+                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <button
+                        class="swiper-next-btn w-[100px] h-14 bg-white rounded-full flex items-center justify-center hover:bg-gray-50 transition-all active:scale-95">
+                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="swiper testimonial-swiper">
+                <div class="swiper-wrapper">
+
+                    <!-- Single Testimonial Slide -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card bg-white border rounded-[20px] border-white/50 shadow-sm relative">
+                            <div class="m-2 bg-[#F9F5F3] p-6 rounded-[20px] flex flex-col justify-between">
+                                <div class="flex gap-1 mb-10">
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <p
+                                    class="text-[18px] md:text-[22px] font-serif italic text-gray-800 leading-[1.6] mb-4 md:mb-12">
+                                    "Hvis jeg ikke kan bruke SPIDER så slutter jeg i jobben"
+                                </p>
+                                <div class="md:mt-auto pt-4 md:pt-8 border-t border-[#DFD5CF] flex items-center gap-4">
+                                    <div class="border-5 border-white rounded-full">
+                                        <img src="/images/testimonial-person.jpg"
+                                            class="w-14 h-14 rounded-full object-cover avatar-grayscale" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-gray-900 text-sm">Farsund Kommune</p>
+                                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-bold">CEO
+                                            of Company</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Testimonial Slide Ends -->
+
+                    <!-- Single Testimonial Slide -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card bg-white border rounded-[20px] border-white/50 shadow-sm relative">
+                            <div class="m-2 bg-[#F9F5F3] p-6 rounded-[20px] flex flex-col justify-between">
+                                <div class="flex gap-1 mb-10">
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <p
+                                    class="text-[18px] md:text-[22px] font-serif italic text-gray-800 leading-[1.6] mb-4 md:mb-12">
+                                    "Hvis jeg ikke kan bruke SPIDER så slutter jeg i jobben"
+                                </p>
+                                <div class="md:mt-auto pt-4 md:pt-8 border-t border-[#DFD5CF] flex items-center gap-4">
+                                    <div class="border-5 border-white rounded-full">
+                                        <img src="/images/testimonial-person.jpg"
+                                            class="w-14 h-14 rounded-full object-cover avatar-grayscale" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-gray-900 text-sm">Farsund Kommune</p>
+                                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-bold">CEO
+                                            of Company</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Testimonial Slide Ends -->
+
+                    <!-- Single Testimonial Slide -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card bg-white border rounded-[20px] border-white/50 shadow-sm relative">
+                            <div class="m-2 bg-[#F9F5F3] p-6 rounded-[20px] flex flex-col justify-between">
+                                <div class="flex gap-1 mb-10">
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <p
+                                    class="text-[18px] md:text-[22px] font-serif italic text-gray-800 leading-[1.6] mb-4 md:mb-12">
+                                    "Hvis jeg ikke kan bruke SPIDER så slutter jeg i jobben"
+                                </p>
+                                <div class="md:mt-auto pt-4 md:pt-8 border-t border-[#DFD5CF] flex items-center gap-4">
+                                    <div class="border-5 border-white rounded-full">
+                                        <img src="/images/testimonial-person.jpg"
+                                            class="w-14 h-14 rounded-full object-cover avatar-grayscale" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-gray-900 text-sm">Farsund Kommune</p>
+                                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-bold">CEO
+                                            of Company</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Testimonial Slide Ends -->
+
+                    <!-- Single Testimonial Slide -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card bg-white border rounded-[20px] border-white/50 shadow-sm relative">
+                            <div class="m-2 bg-[#F9F5F3] p-6 rounded-[20px] flex flex-col justify-between">
+                                <div class="flex gap-1 mb-10">
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <p
+                                    class="text-[18px] md:text-[22px] font-serif italic text-gray-800 leading-[1.6] mb-4 md:mb-12">
+                                    "Hvis jeg ikke kan bruke SPIDER så slutter jeg i jobben"
+                                </p>
+                                <div class="md:mt-auto pt-4 md:pt-8 border-t border-[#DFD5CF] flex items-center gap-4">
+                                    <div class="border-5 border-white rounded-full">
+                                        <img src="/images/testimonial-person.jpg"
+                                            class="w-14 h-14 rounded-full object-cover avatar-grayscale" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-gray-900 text-sm">Farsund Kommune</p>
+                                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-bold">CEO
+                                            of Company</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Testimonial Slide Ends -->
+
+                    <!-- Single Testimonial Slide -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card bg-white border rounded-[20px] border-white/50 shadow-sm relative">
+                            <div class="m-2 bg-[#F9F5F3] p-6 rounded-[20px] flex flex-col justify-between">
+                                <div class="flex gap-1 mb-10">
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <p
+                                    class="text-[18px] md:text-[22px] font-serif italic text-gray-800 leading-[1.6] mb-4 md:mb-12">
+                                    "Hvis jeg ikke kan bruke SPIDER så slutter jeg i jobben"
+                                </p>
+                                <div class="md:mt-auto pt-4 md:pt-8 border-t border-[#DFD5CF] flex items-center gap-4">
+                                    <div class="border-5 border-white rounded-full">
+                                        <img src="/images/testimonial-person.jpg"
+                                            class="w-14 h-14 rounded-full object-cover avatar-grayscale" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-gray-900 text-sm">Farsund Kommune</p>
+                                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-bold">CEO
+                                            of Company</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Testimonial Slide Ends -->
+
+                    <!-- Single Testimonial Slide -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card bg-white border rounded-[20px] border-white/50 shadow-sm relative">
+                            <div class="m-2 bg-[#F9F5F3] p-6 rounded-[20px] flex flex-col justify-between">
+                                <div class="flex gap-1 mb-10">
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <p
+                                    class="text-[18px] md:text-[22px] font-serif italic text-gray-800 leading-[1.6] mb-4 md:mb-12">
+                                    "Hvis jeg ikke kan bruke SPIDER så slutter jeg i jobben"
+                                </p>
+                                <div class="md:mt-auto pt-4 md:pt-8 border-t border-[#DFD5CF] flex items-center gap-4">
+                                    <div class="border-5 border-white rounded-full">
+                                        <img src="/images/testimonial-person.jpg"
+                                            class="w-14 h-14 rounded-full object-cover avatar-grayscale" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-gray-900 text-sm">Farsund Kommune</p>
+                                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-bold">CEO
+                                            of Company</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Testimonial Slide Ends -->
+
+                    <!-- Single Testimonial Slide -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card bg-white border rounded-[20px] border-white/50 shadow-sm relative">
+                            <div class="m-2 bg-[#F9F5F3] p-6 rounded-[20px] flex flex-col justify-between">
+                                <div class="flex gap-1 mb-10">
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <p
+                                    class="text-[18px] md:text-[22px] font-serif italic text-gray-800 leading-[1.6] mb-4 md:mb-12">
+                                    "Hvis jeg ikke kan bruke SPIDER så slutter jeg i jobben"
+                                </p>
+                                <div class="md:mt-auto pt-4 md:pt-8 border-t border-[#DFD5CF] flex items-center gap-4">
+                                    <div class="border-5 border-white rounded-full">
+                                        <img src="/images/testimonial-person.jpg"
+                                            class="w-14 h-14 rounded-full object-cover avatar-grayscale" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-gray-900 text-sm">Farsund Kommune</p>
+                                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-bold">CEO
+                                            of Company</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Testimonial Slide Ends -->
+
+                    <!-- Single Testimonial Slide -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card bg-white border rounded-[20px] border-white/50 shadow-sm relative">
+                            <div class="m-2 bg-[#F9F5F3] p-6 rounded-[20px] flex flex-col justify-between">
+                                <div class="flex gap-1 mb-10">
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <p
+                                    class="text-[18px] md:text-[22px] font-serif italic text-gray-800 leading-[1.6] mb-4 md:mb-12">
+                                    "Hvis jeg ikke kan bruke SPIDER så slutter jeg i jobben"
+                                </p>
+                                <div class="md:mt-auto pt-4 md:pt-8 border-t border-[#DFD5CF] flex items-center gap-4">
+                                    <div class="border-5 border-white rounded-full">
+                                        <img src="/images/testimonial-person.jpg"
+                                            class="w-14 h-14 rounded-full object-cover avatar-grayscale" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-gray-900 text-sm">Farsund Kommune</p>
+                                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-bold">CEO
+                                            of Company</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Testimonial Slide Ends -->
+
+                    <!-- Single Testimonial Slide -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card bg-white border rounded-[20px] border-white/50 shadow-sm relative">
+                            <div class="m-2 bg-[#F9F5F3] p-6 rounded-[20px] flex flex-col justify-between">
+                                <div class="flex gap-1 mb-10">
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+
+                                    <svg class="w-4 h-4 text-[#F38E5F] fill-current" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </div>
+                                <p
+                                    class="text-[18px] md:text-[22px] font-serif italic text-gray-800 leading-[1.6] mb-4 md:mb-12">
+                                    "Hvis jeg ikke kan bruke SPIDER så slutter jeg i jobben"
+                                </p>
+                                <div class="md:mt-auto pt-4 md:pt-8 border-t border-[#DFD5CF] flex items-center gap-4">
+                                    <div class="border-5 border-white rounded-full">
+                                        <img src="/images/testimonial-person.jpg"
+                                            class="w-14 h-14 rounded-full object-cover avatar-grayscale" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-gray-900 text-sm">Farsund Kommune</p>
+                                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-bold">CEO
+                                            of Company</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Testimonial Slide Ends -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section Ends -->
+
+    <!-- Everyone should be satisfied  -->
+    <section class="py-24 bg-[#FAF9F6] relative overflow-hidden">
+        <div class="container mx-auto px-12 text-center mb-20">
+            <h2 class="reveal-type text-3xl md:text-6xl font-serif text-gray-900 mb-8">Alle skal bli fornøyde!</h2>
+            <div class="reveal-text">
+                <p class="max-w-3xl mx-auto text-gray-500 leading-relaxed mb-10 text-sm">
+                    SPIDER løser utfordringer for alle ledd i hjemmetjenesten. Pleierne får tette, men lovlige og trygge
+                    planer.
+                    Planleggerne får mindre tidsbruk og bedre oversikt. Brukerne får kontinuitet og riktig kompetanse
+                    til riktig
+                    tid. Og ledelsen får bedre økonomi, styringsdata og kontroll. Når alt henger sammen, blir hverdagen
+                    bedre for
+                    alle.
+                </p>
+            </div>
+            <button
+                class="bg-[#0c111d] text-white px-8 py-4 rounded-full inline-flex items-center gap-3 hover:bg-black transition-all group">
+                <div class="bg-white rounded-full p-1 group-hover:translate-x-1 transition-transform">
+                    <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </div>
+                <span class="font-semibold text-sm">Book gratis demo</span>
+            </button>
+        </div>
+
+        <div class="max-w-5xl mx-auto relative min-h-[600px] flex items-center justify-center">
+
+            <div class="absolute inset-0 opacity-20"
+                style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 30px 30px;">
+            </div>
+
+            <div
+                class="relative z-10 bg-white/60 backdrop-blur-md rounded-[48px] p-20 shadow-2xl shadow-gray-200/50 border border-white flex flex-col items-center">
+                <img src="/images/main-logo-dark.svg" alt="SPIDER Solutions" class="h-12 mb-2" />
+                <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-[1px] h-12 bg-gray-200"></div>
+                <div class="absolute -bottom-12 left-1/2 -translate-x-1/2 w-[1px] h-12 bg-gray-200"></div>
+                <div class="absolute top-1/2 -left-12 -translate-y-1/2 h-[1px] w-12 bg-gray-200"></div>
+                <div class="absolute top-1/2 -right-12 -translate-y-1/2 h-[1px] w-12 bg-gray-200"></div>
+            </div>
+
+            <div class="absolute top-[10%] left-1/2 -translate-x-1/2 flex flex-col items-center z-20">
+                <div class="bg-[#F1ECEA] rounded-2xl p-6 shadow-sm border border-[#E8E2E1] text-center w-64 mb-12">
+                    <p class="text-sm font-medium text-gray-700">Økonomi, oversikt & rapporter</p>
+                </div>
+                <div class="bg-white px-4 py-1.5 rounded-full border border-gray-100 shadow-sm flex items-center gap-2">
+                    <span class="text-[11px] font-bold text-gray-800">Ledelsen</span>
+                    <div class="w-4 h-4 bg-[#FFE587] rounded-full flex items-center justify-center">
+                        <svg class="w-2.5 h-2.5 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute left-0 top-1/2 -translate-y-1/2 flex items-center z-20">
+                <div class="bg-[#F1ECEA] rounded-2xl p-6 shadow-sm border border-[#E8E2E1] text-center w-64 mr-4">
+                    <p class="text-sm font-medium text-gray-700">Mindre tidsbruk og færre frustrasjoner</p>
+                </div>
+                <div class="bg-white px-4 py-1.5 rounded-full border border-gray-100 shadow-sm flex items-center gap-2">
+                    <span class="text-[11px] font-bold text-gray-800">Planleggerne</span>
+                    <div class="w-4 h-4 bg-[#FFE587] rounded-full flex items-center justify-center">
+                        <svg class="w-2.5 h-2.5 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute right-0 top-1/2 -translate-y-1/2 flex items-center flex-row-reverse z-20">
+                <div class="bg-[#F1ECEA] rounded-2xl p-6 shadow-sm border border-[#E8E2E1] text-center w-64 ml-4">
+                    <p class="text-sm font-medium text-gray-700">Tette, men gode og lovlige planer</p>
+                </div>
+                <div class="bg-white px-4 py-1.5 rounded-full border border-gray-100 shadow-sm flex items-center gap-2">
+                    <span class="text-[11px] font-bold text-gray-800">Pleierne</span>
+                    <div class="w-4 h-4 bg-[#FFE587] rounded-full flex items-center justify-center">
+                        <svg class="w-2.5 h-2.5 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-[7%] left-1/2 -translate-x-1/2 flex flex-col-reverse items-center z-20">
+                <div class="bg-[#F1ECEA] rounded-2xl p-6 shadow-sm border border-[#E8E2E1] text-center w-64 mt-12">
+                    <p class="text-sm font-medium text-gray-700">Kontinuitet, rett kompetanse til rett tid</p>
+                </div>
+                <div class="bg-white px-4 py-1.5 rounded-full border border-gray-100 shadow-sm flex items-center gap-2">
+                    <span class="text-[11px] font-bold text-gray-800">Brukerne</span>
+                    <div class="w-4 h-4 bg-[#FFE587] rounded-full flex items-center justify-center">
+                        <svg class="w-2.5 h-2.5 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Everyone should be satisfied Ends -->
+
+    <!-- Call to action  -->
+    <section class="bg-[#FFE587] py-32 relative overflow-hidden text-center bg-cover bg-center"
+        style="background-image: url('images/newsletter-bg.svg');">
+        <!-- <div class="absolute inset-0 opacity-20 pointer-events-none">
+      <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <circle cx="50" cy="50" r="40" fill="none" stroke="black" stroke-width="0.1" />
+        <circle cx="50" cy="50" r="60" fill="none" stroke="black" stroke-width="0.1" />
+      </svg>
+    </div> -->
+
+        <div class="relative z-10 max-w-4xl mx-auto px-6">
+            <div class="inline-block bg-white px-4 py-1.5 rounded-lg shadow-sm mb-8">
+                <span class="text-[12px] italic font-serif text-gray-800">Interessert?</span>
+            </div>
+
+            <h2 class="reveal-type text-3xl md:text-6xl font-serif text-gray-900 leading-tight mb-8">
+                Se hvordan SPIDER kan forbedre planleggingen i din kommune
+            </h2>
+
+            <p class="reveal-type text-gray-700 text-sm max-w-2xl mx-auto leading-relaxed mb-12">
+                Vi viser hvordan planene bygges, hvordan kompetanse styres og hvordan SPIDER leverer optimaliserte ruter
+                på
+                minutter - på verdensrekordnivå.
+            </p>
+
+            <button
+                class="bg-[#0c111d] text-white px-10 py-5 rounded-full inline-flex items-center gap-3 hover:bg-black transition-all group">
+                <span class="font-bold text-sm">Book gratis demo</span>
+            </button>
+        </div>
+    </section>
+    <!-- Call to action Section ends  -->
+
+    <!-- Footer statrs  -->
+    <footer class="bg-[#F4F3F5] pb-12 border-t border-gray-100 font-sans">
+
+        <div class="border-b border-gray-200 py-12">
+            <div class="container mx-auto px-12 md:pl-12">
+                <img src="/images/main-logo-dark.svg" alt="SPIDER Solutions" class="h-10" />
+            </div>
+        </div>
+
+
+        <div class="container mx-auto px-4 md:px-12 pt-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
+                <div class="lg:col-span-5 space-y-8">
+                    <p class="reveal-type text-[#667085] text-[15px] leading-relaxed max-w-sm">
+                        Hjemmetjenesten er kompleks: kompetansekrav, tidsvinduer, pauser, kontinuitet og store
+                        variasjoner gjennom
+                        dagen.
+                    </p>
+
+                    <div class="space-y-4 max-w-md">
+                        <div
+                            class="p-3 md:p-6 rounded-[24px] border border-gray-300 flex items-center gap-6 transition-all hover:bg-white hover:shadow-xl hover:shadow-gray-200/40 group">
+                            <div
+                                class="w-14 h-14 bg-[#FFE587] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm transition-transform group-hover:scale-105">
+                                <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27c1.12.45 2.33.69 3.58.69a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.24 2.46.69 3.58a1 1 0 01-.27 1.11l-2.2 2.2z" />
+                                </svg>
+                            </div>
+                            <span class="text-md md:text-xl font-serif text-gray-900 tracking-tight">+47
+                                41.21.44.57</span>
+                        </div>
+
+                        <div
+                            class="p-3 md:p-6 rounded-[24px] border border-gray-300 flex items-center gap-6 transition-all hover:bg-white hover:shadow-xl hover:shadow-gray-200/40 group">
+                            <div
+                                class="w-14 h-14 bg-[#FFE587] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm transition-transform group-hover:scale-105">
+                                <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                            </div>
+                            <span
+                                class="text-md md:text-xl font-serif text-gray-900 tracking-tight">info@spidersolutions.no</span>
+                        </div>
+
+                        <div
+                            class="p-3 md:p-6 rounded-[24px] border border-gray-300 flex items-center gap-6 transition-all hover:bg-white hover:shadow-xl hover:shadow-gray-200/40 group">
+                            <div
+                                class="w-14 h-14 bg-[#FFE587] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm transition-transform group-hover:scale-105">
+                                <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+                                </svg>
+                            </div>
+                            <span class="text-md md:text-xl font-serif text-gray-900 tracking-tight">Gaustadalléen 21,
+                                0349
+                                Oslo</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col gap-5">
+                        <a href="#" class="text-[15px] text-[#475467] hover:text-black transition-colors">Om SPIDER</a>
+                        <a href="#"
+                            class="text-[15px] text-[#475467] hover:text-black transition-colors">Funksjonalitet</a>
+                        <a href="#" class="text-[15px] text-[#475467] hover:text-black transition-colors">Nytte</a>
+                        <a href="#"
+                            class="text-[15px] text-[#475467] hover:text-black transition-colors">Verdensrekorder</a>
+                        <a href="#" class="text-[15px] text-[#475467] hover:text-black transition-colors">Teknologi</a>
+                        <a href="#" class="text-[15px] font-bold text-gray-900 hover:underline">Kontakt oss</a>
+                        <a href="#"
+                            class="text-[15px] text-[#475467] hover:text-black transition-colors">Transportbransjen</a>
+                    </div>
+
+                    <div class="flex flex-col gap-5">
+                        <a href="#" class="text-[15px] text-[#475467] hover:text-black transition-colors">Cookies</a>
+                        <a href="#"
+                            class="text-[15px] text-[#475467] hover:text-black transition-colors">Personvernserklæring</a>
+                        <a href="#" class="text-[15px] text-[#475467] hover:text-black transition-colors">Terms of
+                            service</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-10 border-t border-gray-200/60 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm text-gray-900 hover:scale-110 transition-transform">
+                        <svg class="w-[14px] h-[14px]" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm text-gray-900 hover:scale-110 transition-transform">
+                        <svg class="w-[16px] h-[16px]" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm text-gray-900 hover:scale-110 transition-transform">
+                        <svg class="w-[14px] h-[14px]" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" />
+                        </svg>
+                    </a>
+
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm text-gray-900 hover:scale-110 transition-transform">
+                        <svg class="w-[14px] h-[14px]" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-2.201c0-1.13.273-1.605 1.412-1.605h2.588v-4.194l-3.564-.006c-4.257 0-5.436 2.059-5.436 5.304v2.701z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <p class="text-[13px] text-[#98A2B3]">© 2025 Spider. Alle rettigheter reservert.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer ends  -->
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

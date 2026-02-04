@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        'spider-primary': "#F1ECEA",
         'spider-dark': '#0f172a', // Dark text and buttons
         'spider-bg-light': '#fef9f3', // The cream/tan background tint
       },
