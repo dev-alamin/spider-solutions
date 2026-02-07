@@ -133,4 +133,23 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+  new Swiper('.functionalities-slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 24,
+    centeredSlides: true,
+    loop: true,
+    speed: 8000,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: true,
+    },
+
+    freeMode: true, // Crucial for ticker effect
+    // breakpoints: {
+    //   640: { slidesPerView: 2.2 },
+    //   1024: { slidesPerView: 5.5 },
+    // },
+  });
+
 });
