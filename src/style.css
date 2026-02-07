@@ -87,6 +87,34 @@ body {
   top: 10%;
 }
 
+  /* Mathematical anchoring */
+  .orbit-bead {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* We translate the item out by the radius, 
+       then back by half its own size to stay centered ON the line. 
+    */
+    transform: 
+      translate(-50%, -50%) 
+      rotate(calc(360deg / var(--total) * var(--i))) 
+      translateY(var(--radius)) 
+      rotate(calc(-1 * (360deg / var(--total) * var(--i))));
+  }
+
+  /* The counter-rotation logic ensures logos stay upright as the ring spins */
+  .bead-content {
+    @apply w-16 h-16 bg-white rounded-full shadow-xl border border-slate-100 p-3 flex items-center justify-center;
+    animation: inherit;
+    animation-direction: reverse;
+  }
+
+  .bead-content-sm {
+    @apply w-12 h-12 bg-white rounded-full shadow-lg border border-slate-50 p-2.5 flex items-center justify-center;
+    animation: inherit;
+    animation-direction: reverse;
+  }
+
 @keyframes spider-float {
   0% {
     transform: translateY(0px) scale(1);
