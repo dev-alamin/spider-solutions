@@ -1,6 +1,6 @@
 // import Swiper from 'swiper';
 // import 'swiper/css/bundle';
-import {initGSAPAnimations} from './scripts/animation'
+import { initGSAPAnimations } from './scripts/animation'
 
 import Alpine from 'alpinejs'
 window.Alpine = Alpine
@@ -41,17 +41,17 @@ document.addEventListener('alpine:init', () => {
 
   Alpine.data('spiderSolutionFAQ', () => (
     {
-        openIndex: 0, // Default to first item
-        activeImage: '/images/technology-section-main.png',
-        
-        init() {
-            this.$watch('openIndex', (val) => {
-                if (val !== null) {
-                    // Start fade out logic or just switch
-                    this.activeImage = this.faqData[val].image;
-                }
-            })
-        },
+      openIndex: 0, // Default to first item
+      activeImage: '/images/technology-section-main.png',
+
+      init() {
+        this.$watch('openIndex', (val) => {
+          if (val !== null) {
+            // Start fade out logic or just switch
+            this.activeImage = this.faqData[val].image;
+          }
+        })
+      },
       faqData: [
         {
           title: 'Planer ferdige på minutter',
@@ -83,11 +83,10 @@ document.addEventListener('alpine:init', () => {
   ));
 })
 
-
 Alpine.start();
 
 document.addEventListener("DOMContentLoaded", () => {
-  
+
   initGSAPAnimations();
 
   new Swiper('.testimonial-swiper', {
@@ -115,4 +114,23 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
+
+  new Swiper('.value-swiper', {
+    slidesPerView: 1.2,
+    spaceBetween: 24,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-next-custom',
+      prevEl: '.swiper-prev-custom',
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2.2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
 });
