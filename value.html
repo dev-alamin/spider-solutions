@@ -19,12 +19,12 @@
 <body>
 
     <!-- First Two section e.g hero and result -->
-<div class="page-wrapper" data-glows='[
+    <div class="page-wrapper" data-glows='[
     { "color": "#88b9fa", "top": "40%", "left": "-50%", "width": "100vw" },
     { "color": "#f7dc72", "top": "-10%", "right": "-20%", "height": "100vh" }
 ]'>
 
-        <div class="md:min-h-screen">
+        <div class="md:min-h-screen py-4 md:py-8">
             <!-- Header main nav  -->
             <nav class="container flex items-center justify-between px-12 py-6 mx-auto">
                 <div class="flex items-center gap-2">
@@ -35,13 +35,20 @@
                 </div>
 
                 <div
-                class="hidden md:flex items-center gap-2 bg-white/60 backdrop-blur-md p-2 rounded-full border border-gray-100 shadow-sm">
-                <a href="index.html" class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Hjem</a>
-                <a href="value.html" class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Om SPIDER</a>
-                <a href="functionalities.html" class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Funksjonalitet</a>
-                <a href="record.html" class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Nytte</a>
-                <a href="about.html" class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Teknologi</a>
-                <a href="contact.html" class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Kontakt</a>
+                    class="hidden md:flex items-center gap-2 bg-white/60 backdrop-blur-md p-2 rounded-full border border-gray-100 shadow-sm">
+                    <a href="index.html"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Hjem</a>
+                    <a href="value.html"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Om
+                        SPIDER</a>
+                    <a href="functionalities.html"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Funksjonalitet</a>
+                    <a href="record.html"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Nytte</a>
+                    <a href="about.html"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Teknologi</a>
+                    <a href="contact.html"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Kontakt</a>
                 </div>
 
                 <a href="#"
@@ -51,22 +58,24 @@
             <!-- Header main nav  -->
 
             <!-- Hero section  -->
-            <section class="relative min-h-screen pt-8 pb-20 px-6 font-sans">
+            <section class="relative px-4 md:px-12 pt-8 font-sans">
 
                 <div class="container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
                     <div class="lg:col-span-5 space-y-8">
-                        <h1 class="text-5xl md:text-6xl lg:text-7xl text-slate-800 font-serif leading-[1.1]">
+                        <h1 class="reveal-type text-4xl md:text-6xl lg:text-7xl text-slate-800 font-serif leading-[1.1]">
                             Reell verdi i den daglige driften
                         </h1>
-                        <p class="text-lg text-slate-600 leading-relaxed max-w-lg">
+                        <div class="reveal-text">
+                            <p class="text-lg text-slate-600 leading-relaxed max-w-lg">
                             SPIDER er utviklet for å løse de faktiske utfordringene i hjemmetjenesten. Ved å håndtere
                             kompleksitet automatisk, skaper systemet verdi for pleiere, planleggere, ledelse og
                             pasienter – hver eneste dag.
                         </p>
+                        </div>
 
                         <a href="#"
-                            class="group inline-flex items-center bg-[#0f0f0f] text-white pl-2 pr-8 py-2 rounded-full font-medium transition-all hover:pr-10">
+                            class="reveal-button group inline-flex items-center bg-[#0f0f0f] text-white pl-2 pr-8 py-2 rounded-full font-medium transition-all hover:pr-10">
                             <div
                                 class="bg-white rounded-full w-10 h-10 flex items-center justify-center mr-4 text-slate-900">
                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -81,10 +90,10 @@
                     </div>
 
                     <div class="lg:col-span-7">
-                        <div class="relative rounded-[3rem] overflow-hidden shadow-2xl">
+                        <div class="relative rounded-[3rem] overflow-hidden shadow-2xl spider__image-reveal">
                             <img src="images/healthcare-provider.png"
                                 alt="Healthcare provider smiling with elderly patient"
-                                class="w-full h-auto object-cover aspect-[4/3]" />
+                                class="w-full h-auto object-cover aspect-[4/3] spider__image-magnetic-animation" />
                         </div>
                     </div>
 
@@ -92,6 +101,14 @@
             </section>
             <!-- Hero section ends  -->
         </div>
+
+        <!-- Seperator, Border  -->
+        <div class="relative flex items-center justify-center container mx-auto">
+            <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                <div class="w-full border-t border-gray-200/60"></div>
+            </div>
+        </div>
+        <!-- Seperator, Border ends  -->
 
         <!-- Feature cards  -->
         <section class="py-24 px-6">
@@ -102,15 +119,15 @@
                         class="bg-white px-4 py-1.5 rounded-md text-xs font-semibold text-slate-500 shadow-sm border border-slate-100 italic">Nøkkelfordeler</span>
                 </div>
 
-                <h2 class="text-4xl md:text-5xl text-slate-800 font-serif mb-16">
+                <h2 class="reveal-type text-4xl md:text-5xl text-slate-800 font-serif mb-16">
                     Planlegging som gir mer tid, bedre <br> kvalitet og lavere belastning
                 </h2>
 
-                <div class="grid grid-cols-1 gap-8">
+                <div class="reveal-grid grid grid-cols-1 gap-8">
 
                     <!-- Single Card  -->
                     <article
-                        class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100 grid grid-cols-1 lg:grid-cols-2">
+                        class="reveal-card bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100 grid grid-cols-1 lg:grid-cols-2">
                         <div class="bg-[#eef2ff] p-12 flex items-center justify-center relative min-h-[300px]">
                             <svg viewBox="0 0 400 300" class="w-full h-full text-white fill-current opacity-80">
                                 <rect x="20" y="20" width="60" height="100" rx="4" />
@@ -134,19 +151,21 @@
                             <div>
                                 <div class="flex items-center gap-4 mb-6">
                                     <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-slate-400" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-slate-400"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                                 d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                                 d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                         </svg>
                                     </div>
-                                    <h3 class="text-xl font-medium text-slate-800">Mindre kjøring, mer tid hos pasientene
+                                    <h3 class="text-xl font-medium text-slate-800">Mindre kjøring, mer tid hos
+                                        pasientene
                                     </h3>
                                 </div>
                                 <p class="text-slate-500 text-sm leading-relaxed mb-8">
-                                    SPIDER beregner optimal rekkefølge på alle besøk og ser hele arbeidsdagen i sammenheng.
+                                    SPIDER beregner optimal rekkefølge på alle besøk og ser hele arbeidsdagen i
+                                    sammenheng.
                                     Systemet tar hensyn til geografi, tidsvinduer, kompetansekrav og kontinuitet.
                                 </p>
                                 <ul class="space-y-4">
@@ -182,7 +201,7 @@
 
                     <!-- Single Card  -->
                     <article
-                        class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100 grid grid-cols-1 lg:grid-cols-2">
+                        class="reveal-card bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100 grid grid-cols-1 lg:grid-cols-2">
                         <div class="bg-[#fff7ed] p-12 flex items-center justify-center min-h-[300px]">
                             <div class="relative w-64 h-48">
                                 <svg viewBox="0 0 200 150" class="w-full h-full">
@@ -201,16 +220,18 @@
                             <div>
                                 <div class="flex items-center gap-4 mb-6">
                                     <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-slate-400" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-slate-400"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                                 d="M13 10V3L4 14h7v7l9-11h-7z" />
                                         </svg>
                                     </div>
-                                    <h3 class="text-xl font-medium text-slate-800">Planlegging på minutter, ikke timer</h3>
+                                    <h3 class="text-xl font-medium text-slate-800">Planlegging på minutter, ikke timer
+                                    </h3>
                                 </div>
                                 <p class="text-slate-500 text-sm leading-relaxed mb-8">
-                                    SPIDER håndterer komplekse planleggingsoppgaver automatisk og genererer komplette planer
+                                    SPIDER håndterer komplekse planleggingsoppgaver automatisk og genererer komplette
+                                    planer
                                     på minutter. Systemet beregner enorme mengder kombinasjoner.
                                 </p>
                                 <ul class="space-y-4">
@@ -246,7 +267,7 @@
 
                     <!-- Single Card  -->
                     <article
-                        class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100 grid grid-cols-1 lg:grid-cols-2">
+                        class="reveal-card bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100 grid grid-cols-1 lg:grid-cols-2">
                         <div class="bg-slate-50 p-12 flex items-center justify-center min-h-[350px] relative">
                             <div class="relative h-64 w-40">
                                 <div class="absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 -translate-x-1/2"></div>
@@ -261,7 +282,8 @@
                                 </div>
 
                                 <div class="absolute top-20 right-0 flex items-center gap-3">
-                                    <div class="w-8 h-8 bg-[#fcebb6] rounded-lg flex items-center justify-center shadow-sm">
+                                    <div
+                                        class="w-8 h-8 bg-[#fcebb6] rounded-lg flex items-center justify-center shadow-sm">
                                         <svg class="w-4 h-4 text-slate-800" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">
                                             <path d="M5 13l4 4L19 7" stroke-width="3" />
@@ -287,8 +309,8 @@
                             <div>
                                 <div class="flex items-center gap-4 mb-6">
                                     <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-slate-400" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-slate-400"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                                 d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.54 1.118l-3.976-2.888a1 1 0 00-1.175 0l-3.976 2.888c-.784.57-1.838-.197-1.539-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
                                         </svg>
@@ -328,7 +350,7 @@
 
                     <!-- Single Card  -->
                     <article
-                        class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100 grid grid-cols-1 lg:grid-cols-2">
+                        class="reveal-card bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100 grid grid-cols-1 lg:grid-cols-2">
                         <div class="bg-[#fffbeb] p-12 flex items-center justify-center min-h-[350px]">
                             <div class="relative w-64 h-64 flex items-center justify-center">
                                 <div class="absolute inset-0 border border-amber-200 rounded-full opacity-20"></div>
@@ -359,13 +381,14 @@
                             <div>
                                 <div class="flex items-center gap-4 mb-6">
                                     <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-slate-400" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-slate-400"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                                 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                         </svg>
                                     </div>
-                                    <h3 class="text-xl font-medium text-slate-800">Riktig kompetanse på riktig oppdrag</h3>
+                                    <h3 class="text-xl font-medium text-slate-800">Riktig kompetanse på riktig oppdrag
+                                    </h3>
                                 </div>
                                 <p class="text-slate-500 text-sm leading-relaxed mb-8">
                                     Systemet sikrer at hver oppgave utføres av personell med riktig kompetanse, uten
@@ -400,7 +423,7 @@
 
                     <!-- Single Card  -->
                     <article
-                        class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100 grid grid-cols-1 lg:grid-cols-2">
+                        class="reveal-card bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100 grid grid-cols-1 lg:grid-cols-2">
                         <div class="bg-[#eff6ff] p-12 flex items-center justify-center min-h-[350px]">
                             <div class="relative w-full max-w-[300px] h-48 border-l border-b border-blue-200">
                                 <div class="absolute w-full h-px bg-blue-100 top-1/4"></div>
@@ -419,8 +442,8 @@
                             <div>
                                 <div class="flex items-center gap-4 mb-6">
                                     <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-slate-400" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-slate-400"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                                 d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                                         </svg>
@@ -468,7 +491,7 @@
     <!-- Slider section  -->
     <section class="bg-[#F1ECEA] py-24 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 mb-12 flex items-end justify-between">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl text-slate-800 font-serif leading-tight">
+            <h2 class="reveal-type text-4xl md:text-5xl lg:text-6xl text-slate-800 font-serif leading-tight">
                 Verdien merkes i hele tjenesten
             </h2>
 
@@ -619,194 +642,221 @@
     </section>
     <!-- Slider section ends  -->
 
-    <!-- Comparison section  -->
-    <section class="bg-[#f9f8f6] py-32 px-6 overflow-hidden"">
-    <div class=" max-w-5xl mx-auto">
+        <div class="page-wrapper" data-glows='[
+        { "color": "#88b9fa", "top": "50%", "left": "-50%", "width": "100vw" },
+        { "color": "#f7dc72", "top": "5%", "right": "-20%", "height": "100vh" }
+    ]'>
+            <!-- Comparison section  -->
+        <section class="py-32 px-6 overflow-hidden"">
+            <div class=" max-w-5xl mx-auto">
 
-        <h2 class="text-4xl md:text-5xl text-slate-800 font-serif text-center mb-24">
-            Fra manuell kamp til operativ kontroll
-        </h2>
+                    <h2 class="reveal-type text-4xl md:text-5xl text-slate-800 font-serif text-center mb-24">
+                        Fra manuell kamp til operativ kontroll
+                    </h2>
 
-        <div class="overflow-x-auto pb-12 -mx-6 px-6 hide-scrollbar md:overflow-visible">
-            <div
-                class="grid grid-cols-[1.5fr_1fr_1fr] md:grid-cols-[1.2fr_1fr_1fr] relative min-w-[700px] md:min-w-full">
+                    <div class="overflow-x-auto pb-12 -mx-6 px-6 hide-scrollbar md:overflow-visible">
+                        <div
+                            class="reveal-grid grid grid-cols-[1.5fr_1fr_1fr] md:grid-cols-[1.2fr_1fr_1fr] md:gap-x-8 relative min-w-[700px] md:min-w-full">
 
-                <div class="flex flex-col">
-                    <div class="h-16"></div>
-                    <div class="h-20 flex items-center border-b border-slate-200 text-slate-700 font-medium text-sm">
-                        Planer genereres automatisk</div>
-                    <div class="h-20 flex items-center border-b border-slate-200 text-slate-700 font-medium text-sm">
-                        Planene oppdateres og reoptimaliseres</div>
-                    <div class="h-20 flex items-center border-b border-slate-200 text-slate-700 font-medium text-sm">
-                        Optimalisering på tvers av alle hensyn</div>
-                    <div class="h-20 flex items-center border-b border-slate-200 text-slate-700 font-medium text-sm">
-                        Kvalitet og presisjon i ferdige planer</div>
-                    <div class="h-20 flex items-center border-b border-slate-200 text-slate-700 font-medium text-sm">
-                        Fleksibilitet ved endringer i løpet av dagen</div>
-                    <div class="h-20 flex items-center text-slate-700 font-medium text-sm">Kontinuitet og kompetanse
-                        håndteres</div>
-                </div>
+                            <div class="reveal-card flex flex-col">
+                                <div class="h-16"></div>
+                                <div
+                                    class="h-20 flex items-center border-b border-slate-200 text-slate-700 font-medium text-sm">
+                                    Planer genereres automatisk</div>
+                                <div
+                                    class="h-20 flex items-center border-b border-slate-200 text-slate-700 font-medium text-sm">
+                                    Planene oppdateres og reoptimaliseres</div>
+                                <div
+                                    class="h-20 flex items-center border-b border-slate-200 text-slate-700 font-medium text-sm">
+                                    Optimalisering på tvers av alle hensyn</div>
+                                <div
+                                    class="h-20 flex items-center border-b border-slate-200 text-slate-700 font-medium text-sm">
+                                    Kvalitet og presisjon i ferdige planer</div>
+                                <div
+                                    class="h-20 flex items-center border-b border-slate-200 text-slate-700 font-medium text-sm">
+                                    Fleksibilitet ved endringer i løpet av dagen</div>
+                                <div class="h-20 flex items-center text-slate-700 font-medium text-sm">Kontinuitet og kompetanse
+                                    håndteres</div>
+                            </div>
 
-                <div class="bg-[#f2f0ec] rounded-[1.5rem] flex flex-col relative">
-                    <div class="h-16 flex items-center justify-center">
-                        <span
-                            class="bg-[#e2e0db] text-slate-500 px-4 py-1 rounded text-[10px] font-bold uppercase tracking-wider">Før
-                            SPIDER</span>
-                    </div>
-                    <div class="h-20 flex items-center justify-center border-b border-slate-300/30 text-slate-400">
-                        <div
-                            class="w-7 h-7 rounded-full border border-slate-300 flex items-center justify-center font-bold">
-                            ✕</div>
-                    </div>
-                    <div class="h-20 flex items-center justify-center border-b border-slate-300/30 text-slate-400">
-                        <div
-                            class="w-7 h-7 rounded-full border border-slate-300 flex items-center justify-center font-bold">
-                            ✕</div>
-                    </div>
-                    <div class="h-20 flex items-center justify-center border-b border-slate-300/30 text-slate-400">
-                        <div
-                            class="w-7 h-7 rounded-full border border-slate-300 flex items-center justify-center font-bold">
-                            ✕</div>
-                    </div>
-                    <div
-                        class="h-20 flex items-center justify-center border-b border-slate-300/30 px-4 text-center text-[11px] italic text-slate-400">
-                        Avhenger av manuell erfaring og tid</div>
-                    <div class="h-20 flex items-center justify-center border-b border-slate-300/30 text-slate-400">
-                        <div
-                            class="w-7 h-7 rounded-full border border-slate-300 flex items-center justify-center font-bold">
-                            ✕</div>
-                    </div>
-                    <div class="h-20 flex items-center justify-center text-slate-400">
-                        <div
-                            class="w-7 h-7 rounded-full border border-slate-300 flex items-center justify-center font-bold">
-                            ✕</div>
-                    </div>
-                </div>
+                            <div class="reveal-card bg-[#f2f0ec] rounded-[1.5rem] flex flex-col relative">
+                                <div class="h-16 flex items-center justify-center">
+                                    <span
+                                        class="bg-[#e2e0db] text-slate-500 px-4 py-1 rounded text-[10px] font-bold uppercase tracking-wider">Før
+                                        SPIDER</span>
+                                </div>
+                                <div class="h-20 flex items-center justify-center border-b border-slate-300/30 text-slate-400">
+                                    <div
+                                        class="w-7 h-7 rounded-full border border-slate-300 flex items-center justify-center font-bold">
+                                        ✕</div>
+                                </div>
+                                <div class="h-20 flex items-center justify-center border-b border-slate-300/30 text-slate-400">
+                                    <div
+                                        class="w-7 h-7 rounded-full border border-slate-300 flex items-center justify-center font-bold">
+                                        ✕</div>
+                                </div>
+                                <div class="h-20 flex items-center justify-center border-b border-slate-300/30 text-slate-400">
+                                    <div
+                                        class="w-7 h-7 rounded-full border border-slate-300 flex items-center justify-center font-bold">
+                                        ✕</div>
+                                </div>
+                                <div
+                                    class="h-20 flex items-center justify-center border-b border-slate-300/30 px-4 text-center text-[11px] italic text-slate-400">
+                                    Avhenger av manuell erfaring og tid</div>
+                                <div class="h-20 flex items-center justify-center border-b border-slate-300/30 text-slate-400">
+                                    <div
+                                        class="w-7 h-7 rounded-full border border-slate-300 flex items-center justify-center font-bold">
+                                        ✕</div>
+                                </div>
+                                <div class="h-20 flex items-center justify-center text-slate-400">
+                                    <div
+                                        class="w-7 h-7 rounded-full border border-slate-300 flex items-center justify-center font-bold">
+                                        ✕</div>
+                                </div>
+                            </div>
 
-                <div
-                    class="bg-white rounded-[1.5rem] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.08)] flex flex-col relative z-10 border border-slate-100">
-                    <div class="h-16 flex items-center justify-center">
-                        <span
-                            class="bg-[#fcebb6] text-slate-800 px-4 py-1 rounded text-[10px] font-bold uppercase tracking-wider">Etter
-                            SPIDER</span>
+                            <div
+                                class="reveal-card bg-white rounded-[1.5rem] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.08)] flex flex-col relative z-10 border border-slate-100">
+                                <div class="h-16 flex items-center justify-center">
+                                    <span
+                                        class="bg-[#fcebb6] text-slate-800 px-4 py-1 rounded text-[10px] font-bold uppercase tracking-wider">Etter
+                                        SPIDER</span>
+                                </div>
+                                <div class="h-20 flex items-center justify-center border-b border-slate-100">
+                                    <div
+                                        class="w-7 h-7 rounded-full bg-[#fcebb6] flex items-center justify-center text-slate-800">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div
+                                    class="h-20 flex items-center justify-center border-b border-slate-100 text-slate-800 font-medium text-sm">
+                                    Kontinuerlig</div>
+                                <div class="h-20 flex items-center justify-center border-b border-slate-100">
+                                    <div
+                                        class="w-7 h-7 rounded-full bg-[#fcebb6] flex items-center justify-center text-slate-800">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div
+                                    class="h-20 flex items-center justify-center border-b border-slate-100 px-6 text-center text-[11px] font-medium text-slate-700 leading-tight">
+                                    Dokumentert toppoptimal kvalitet – hver dag</div>
+                                <div class="h-20 flex items-center justify-center border-b border-slate-100">
+                                    <div
+                                        class="w-7 h-7 rounded-full bg-[#fcebb6] flex items-center justify-center text-slate-800">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="h-20 flex items-center justify-center">
+                                    <div
+                                        class="w-7 h-7 rounded-full bg-[#fcebb6] flex items-center justify-center text-slate-800">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="h-20 flex items-center justify-center border-b border-slate-100">
-                        <div class="w-7 h-7 rounded-full bg-[#fcebb6] flex items-center justify-center text-slate-800">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg></div>
-                    </div>
-                    <div
-                        class="h-20 flex items-center justify-center border-b border-slate-100 text-slate-800 font-medium text-sm">
-                        Kontinuerlig</div>
-                    <div class="h-20 flex items-center justify-center border-b border-slate-100">
-                        <div class="w-7 h-7 rounded-full bg-[#fcebb6] flex items-center justify-center text-slate-800">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg></div>
-                    </div>
-                    <div
-                        class="h-20 flex items-center justify-center border-b border-slate-100 px-6 text-center text-[11px] font-medium text-slate-700 leading-tight">
-                        Dokumentert toppoptimal kvalitet – hver dag</div>
-                    <div class="h-20 flex items-center justify-center border-b border-slate-100">
-                        <div class="w-7 h-7 rounded-full bg-[#fcebb6] flex items-center justify-center text-slate-800">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg></div>
-                    </div>
-                    <div class="h-20 flex items-center justify-center">
-                        <div class="w-7 h-7 rounded-full bg-[#fcebb6] flex items-center justify-center text-slate-800">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg></div>
-                    </div>
-                </div>
 
             </div>
-        </div>
-        </div>
-    </section>
-    <!-- Comparison section ends  -->
+        </section>
+        <!-- Comparison section ends  -->
 
-    <!-- Result section  -->
-    <section class="min-h-screen bg-gradient-to-br from-slate-50 to-orange-50/30 p-8 md:p-20 font-sans text-slate-900">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-            <div class="space-y-8">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-light leading-tight tracking-tight text-balance">
-                    Verdien av SPIDER ligger i samspillet mellom teknologi og mennesker.
-                </h1>
-
-                <div class="space-y-6 max-w-lg">
-                    <p class="text-lg font-medium text-slate-700">
-                        Teknologi som forsterker mennesket.
-                    </p>
-                    <p class="text-slate-600 leading-relaxed">
-                        Ved å kombinere avansert optimalisering med forståelse for hverdagen i hjemmetjenesten,
-                        skaper SPIDER resultater som merkes i hele organisasjonen – fra administrasjon til det enkelte
-                        hjemmebesøk.
-                    </p>
-                </div>
+        <!-- Seperator, Border  -->
+        <div class="relative flex items-center justify-center container mx-auto">
+            <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                <div class="w-full border-t border-gray-200/60"></div>
             </div>
+        </div>
+        <!-- Seperator Border ends  -->
 
-            <div class="space-y-6">
+        <!-- Result section  -->
+        <section class="min-h-screen p-8 md:p-20 font-sans text-slate-900">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                <div
-                    class="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow duration-300 border border-white">
-                    <div class="bg-slate-50 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                        </svg>
+                <div class="space-y-8">
+                    <h1 class="reveal-type text-4xl md:text-5xl lg:text-6xl font-light leading-tight tracking-tight text-balance">
+                        Verdien av SPIDER ligger i samspillet mellom teknologi og mennesker.
+                    </h1>
+
+                    <div class="reveal-text space-y-6 max-w-lg">
+                        <p class="text-lg font-medium text-slate-700">
+                            Teknologi som forsterker mennesket.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            Ved å kombinere avansert optimalisering med forståelse for hverdagen i hjemmetjenesten,
+                            skaper SPIDER resultater som merkes i hele organisasjonen – fra administrasjon til det enkelte
+                            hjemmebesøk.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-light mb-4">Slik fungerer teknologien</h3>
-                    <p class="text-slate-500 mb-8 leading-relaxed">
-                        Utforsk hvordan SPIDER automatiserer ruteplanlegging og ressursbruk.
-                    </p>
-                    <button
-                        class="group flex items-center gap-3 bg-slate-50 hover:bg-slate-100 px-6 py-4 rounded-full transition-all">
-                        <span class="bg-white rounded-full p-1 group-hover:translate-x-1 transition-transform">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5l7 7-7 7" />
+                </div>
+
+                <div class="space-y-6 reveal-grid">
+
+                    <div
+                        class="reveal-card bg-white p-8 md:p-10 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow duration-300 border border-white">
+                        <div class="bg-slate-50 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
                             </svg>
-                        </span>
-                        <span class="font-medium text-sm">Utforsk funksjonalitet</span>
-                    </button>
-                </div>
-
-                <div
-                    class="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow duration-300 border border-white">
-                    <div class="bg-slate-50 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
+                        </div>
+                        <h3 class="text-2xl font-light mb-4">Slik fungerer teknologien</h3>
+                        <p class="text-slate-500 mb-8 leading-relaxed">
+                            Utforsk hvordan SPIDER automatiserer ruteplanlegging og ressursbruk.
+                        </p>
+                        <button
+                            class="group flex items-center gap-3 bg-slate-50 hover:bg-slate-100 px-6 py-4 rounded-full transition-all">
+                            <span class="bg-white rounded-full p-1 group-hover:translate-x-1 transition-transform">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </span>
+                            <span class="font-medium text-sm">Utforsk funksjonalitet</span>
+                        </button>
                     </div>
-                    <h3 class="text-2xl font-light mb-4">Dokumentert effekt</h3>
-                    <p class="text-slate-500 mb-8 leading-relaxed text-pretty">
-                        Se de faktiske tallene og resultatene fra over 30 norske kommuner som allerede bruker SPIDER.
-                    </p>
-                    <button
-                        class="group flex items-center gap-3 bg-slate-50 hover:bg-slate-100 px-6 py-4 rounded-full transition-all">
-                        <span class="bg-white rounded-full p-1 group-hover:translate-x-1 transition-transform">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5l7 7-7 7" />
-                            </svg>
-                        </span>
-                        <span class="font-medium text-sm">Se dokumenterte resultater</span>
-                    </button>
-                </div>
 
+                    <div
+                        class="reveal-card bg-white p-8 md:p-10 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow duration-300 border border-white">
+                        <div class="bg-slate-50 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-light mb-4">Dokumentert effekt</h3>
+                        <p class="text-slate-500 mb-8 leading-relaxed text-pretty">
+                            Se de faktiske tallene og resultatene fra over 30 norske kommuner som allerede bruker SPIDER.
+                        </p>
+                        <button
+                            class="group flex items-center gap-3 bg-slate-50 hover:bg-slate-100 px-6 py-4 rounded-full transition-all">
+                            <span class="bg-white rounded-full p-1 group-hover:translate-x-1 transition-transform">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </span>
+                            <span class="font-medium text-sm">Se dokumenterte resultater</span>
+                        </button>
+                    </div>
+
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
     <!-- Result section ends  -->
+    </div>
 
     <!-- Call to action  -->
     <section class="bg-[#FFE587] py-32 relative overflow-hidden text-center bg-cover bg-center"
@@ -817,11 +867,11 @@
             </h2>
 
             <p class="reveal-type text-gray-700 text-sm max-w-2xl mx-auto leading-relaxed mb-12">
-               SPIDER tilpasses lokale regler, arbeidsflyt og prioriteringer – og leverer verdi der det betyr mest.
+                SPIDER tilpasses lokale regler, arbeidsflyt og prioriteringer – og leverer verdi der det betyr mest.
             </p>
 
             <button
-                class="bg-[#0c111d] text-white px-10 py-5 rounded-full inline-flex items-center gap-3 hover:bg-black transition-all group">
+                class="reveal-button bg-[#0c111d] text-white px-10 py-5 rounded-full inline-flex items-center gap-3 hover:bg-black transition-all group">
                 <span class="font-bold text-sm">Book gratis demo</span>
             </button>
         </div>
