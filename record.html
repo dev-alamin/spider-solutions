@@ -19,10 +19,7 @@
 <body>
 
     <!-- First Two section e.g hero and result -->
-    <div class="page-wrapper" style="position: relative; overflow: hidden;">
-        <div class="glow-blob yellow-glow"></div>
-        <div class="glow-blob blue-glow"></div>
-
+    <div class="page-wrapper">
         <div class="md:min-h-screen">
             <!-- Header main nav  -->
             <nav class="container flex items-center justify-between px-12 py-6 mx-auto">
@@ -50,35 +47,38 @@
             <!-- Header main nav  -->
 
             <!-- Hero section  -->
-            <section class="py-24 px-6 font-sans text-[#333]">
+            <section class="py-8 md:py-24 font-sans text-[#333]">
+
                 <div class="container mx-auto">
 
                     <div class="text-center mb-32">
-                        <h1 class="text-4xl md:text-5xl font-serif text-[#1a1a1a] mb-8 leading-tight tracking-tight">
+                        <h1 class="reveal-type text-4xl md:text-5xl font-serif text-[#1a1a1a] mb-8 leading-tight tracking-tight">
                             Dokumentert optimeringskvalitet i <br /> verdensklasse
                         </h1>
-                        <div class="max-w-3xl mx-auto space-y-6 text-sm md:text-base text-gray-600 leading-relaxed">
+                        <div class="reveal-text max-w-3xl mx-auto space-y-6 text-sm md:text-base text-gray-600 leading-relaxed">
                             <p>SPIDER har oppnådd dokumenterte resultater på krevende, internasjonale optimeringstester.
                             </p>
                             <p>Resultatene viser en optimeringskvalitet som overgår tidligere kjente beste løsninger –
                                 og forklarer hvorfor SPIDER presterer så godt også i reell kommunal drift.</p>
                         </div>
                     </div>
+                </div>
 
-                    <div class="text-center">
-                        <h2 class="text-3xl md:text-4xl font-serif text-[#1a1a1a] mb-6 leading-tight tracking-tight">
+                <div class="bg-[#F1ECEA] py-8">
+                <div class="text-center container mx-auto">
+                        <h2 class="reveal-type text-3xl md:text-4xl font-serif text-[#1a1a1a] mb-6 leading-tight tracking-tight">
                             Dokumentert ytelse på <br /> internasjonale benchmark-tester
                         </h2>
-                        <p class="max-w-2xl mx-auto text-sm text-gray-500 mb-16 leading-relaxed">
+                        <p class="reveal-text max-w-2xl mx-auto text-sm text-gray-500 mb-16 leading-relaxed">
                             SPIDER er testet mot rundt 300 internasjonalt anerkjente optimeringstestcaser, <br
                                 class="hidden md:block" />
                             brukt av forskningsmiljøer og teknologileverandører verden over.
                         </p>
 
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                        <div class="reveal-grid grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
 
                             <div
-                                class="bg-white rounded-[2rem] p-10 pt-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] text-left relative">
+                                class="reveal-card bg-white rounded-[2rem] p-10 pt-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] text-left relative">
                                 <div class="absolute top-8 right-8 bg-[#dcf2d1] rounded-full p-1.5">
                                     <svg class="w-3 h-3 text-[#2d5a27]" fill="none" stroke="currentColor"
                                         stroke-width="4" viewBox="0 0 24 24">
@@ -93,7 +93,7 @@
                             </div>
 
                             <div
-                                class="bg-white rounded-[2rem] p-10 pt-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] text-left relative">
+                                class="reveal-card bg-white rounded-[2rem] p-10 pt-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] text-left relative">
                                 <div class="absolute top-8 right-8 bg-[#dcf2d1] rounded-full p-1.5">
                                     <svg class="w-3 h-3 text-[#2d5a27]" fill="none" stroke="currentColor"
                                         stroke-width="4" viewBox="0 0 24 24">
@@ -108,7 +108,7 @@
                             </div>
 
                             <div
-                                class="bg-white rounded-[2rem] p-10 pt-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] text-left relative">
+                                class="reveal-card bg-white rounded-[2rem] p-10 pt-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] text-left relative">
                                 <div class="absolute top-8 right-8 bg-[#dcf2d1] rounded-full p-1.5">
                                     <svg class="w-3 h-3 text-[#2d5a27]" fill="none" stroke="currentColor"
                                         stroke-width="4" viewBox="0 0 24 24">
@@ -140,9 +140,9 @@
 
     <section class="px-6 py-16 text-center">
         <div class="container mx-auto">
-            <h2 class="text-4xl md:text-5xl font-serif text-[#1a1a1a] mb-8 leading-tight">Hvorfor disse testene er
+            <h2 class="reveal-type text-4xl md:text-5xl font-serif text-[#1a1a1a] mb-8 leading-tight">Hvorfor disse testene er
                 viktige</h2>
-            <div class="space-y-6 text-gray-600 text-sm md:text-base leading-relaxed">
+            <div class="reveal-text space-y-6 text-gray-600 text-sm md:text-base leading-relaxed">
                 <p>Benchmark-testene representerer ekstrem planleggingskompleksitet. <br /> Sterke resultater her viser
                     at løsningen ikke bare fungerer i enkle scenarioer – men også når mange hensyn må balanseres
                     samtidig.</p>
@@ -154,12 +154,12 @@
 
     <section class="pb-32 px-6 py-16 bg-[#F1ECEA]">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-serif text-[#1a1a1a] mb-6">Hva som faktisk optimaliseres</h2>
+            <h2 class="reveal-type text-4xl md:text-5xl font-serif text-[#1a1a1a] mb-6">Hva som faktisk optimaliseres</h2>
             <p class="text-gray-500 mb-16">SPIDER optimaliserer langt mer enn avstand eller kjøretid.</p>
 
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="reveal-grid grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div
-                    class="bg-white rounded-2xl p-4 flex items-center gap-4 shadow-[0_15px_35px_rgba(0,0,0,0.04)] text-left">
+                    class="reveal-card bg-white rounded-2xl p-4 flex items-center gap-4 shadow-[0_15px_35px_rgba(0,0,0,0.04)] text-left">
                     <div class="bg-[#f7f5f2] p-3 rounded-xl"><svg class="w-6 h-6 opacity-70" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -169,7 +169,7 @@
                     <span class="font-serif text-lg leading-snug">Gjennomførbare <br /> planer</span>
                 </div>
                 <div
-                    class="bg-white rounded-2xl p-4 flex items-center gap-4 shadow-[0_15px_35px_rgba(0,0,0,0.04)] text-left">
+                    class="reveal-card bg-white rounded-2xl p-4 flex items-center gap-4 shadow-[0_15px_35px_rgba(0,0,0,0.04)] text-left">
                     <div class="bg-[#f7f5f2] p-3 rounded-xl"><svg class="w-6 h-6 opacity-70" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -178,7 +178,7 @@
                     <span class="font-serif text-lg leading-snug">Effektiv <br /> ressursbruk</span>
                 </div>
                 <div
-                    class="bg-white rounded-2xl p-4 flex items-center gap-4 shadow-[0_15px_35px_rgba(0,0,0,0.04)] text-left">
+                    class="reveal-card bg-white rounded-2xl p-4 flex items-center gap-4 shadow-[0_15px_35px_rgba(0,0,0,0.04)] text-left">
                     <div class="bg-[#f7f5f2] p-3 rounded-xl"><svg class="w-6 h-6 opacity-70" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -187,7 +187,7 @@
                     <span class="font-serif text-lg leading-snug">Robuste <br /> planer</span>
                 </div>
                 <div
-                    class="bg-white rounded-2xl p-4 flex items-center gap-4 shadow-[0_15px_35px_rgba(0,0,0,0.04)] text-left">
+                    class="reveal-card bg-white rounded-2xl p-4 flex items-center gap-4 shadow-[0_15px_35px_rgba(0,0,0,0.04)] text-left">
                     <div class="bg-[#f7f5f2] p-3 rounded-xl"><svg class="w-6 h-6 opacity-70" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
