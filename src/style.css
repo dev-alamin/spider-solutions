@@ -99,34 +99,49 @@ body {
 .key-benefit-blue-glow-left.technology {
   top: 10%;
 }
-
-  /* Mathematical anchoring */
-  .orbit-bead {
+/* Base math for all beads */
+.orbit-bead {
     position: absolute;
     top: 50%;
     left: 50%;
-    /* We translate the item out by the radius, 
-       then back by half its own size to stay centered ON the line. 
-    */
-    transform: 
-      translate(-50%, -50%) 
-      rotate(calc(360deg / var(--total) * var(--i))) 
-      translateY(var(--radius)) 
-      rotate(calc(-1 * (360deg / var(--total) * var(--i))));
-  }
+    /* We use --radius, which will be defined by the parent circle */
+    transform: translate(-50%, -50%) 
+               rotate(calc(360deg / var(--total) * var(--i))) 
+               translate(var(--radius)) 
+               rotate(calc(-360deg / var(--total) * var(--i)));
+}
 
-  /* The counter-rotation logic ensures logos stay upright as the ring spins */
-  .bead-content {
-    @apply w-16 h-16 bg-white rounded-full shadow-xl border border-slate-100 p-3 flex items-center justify-center;
-    animation: inherit;
-    animation-direction: reverse;
-  }
+/* Inner Circle Settings */
+.inner-orbit {
+    --radius: 105px; /* Mobile: 210px / 2 */
+}
 
-  .bead-content-sm {
-    @apply w-12 h-12 bg-white rounded-full shadow-lg border border-slate-50 p-2.5 flex items-center justify-center;
-    animation: inherit;
-    animation-direction: reverse;
-  }
+/* Outer Circle Settings */
+.outer-orbit {
+    --radius: 155px; /* Mobile: 310px / 2 */
+}
+
+@media (min-width: 768px) {
+    .inner-orbit {
+        --radius: 225px; /* Desktop: 450px / 2 */
+    }
+    .outer-orbit {
+        --radius: 375px; /* Desktop: 750px / 2 */
+    }
+}
+
+/* Bead Styling */
+.bead-content, .bead-content-sm {
+    @apply bg-white rounded-xl shadow-lg border border-slate-100 flex items-center justify-center transition-transform hover:scale-110 pointer-events-auto;
+}
+
+/* Icon Sizes */
+.bead-content { @apply w-10 h-10 md:w-14 md:h-14 p-2; }
+.bead-content-sm { @apply w-8 h-8 md:w-12 md:h-12 p-1.5; }
+
+.bead-content img, .bead-content-sm img {
+    @apply w-full h-full object-contain;
+}
 
 @keyframes spider-float {
   0% {
