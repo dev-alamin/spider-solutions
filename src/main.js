@@ -152,4 +152,42 @@ document.addEventListener("DOMContentLoaded", () => {
     // },
   });
 
+  const containers = document.querySelectorAll('[data-glows]');
+  
+    if( ! containers ) return;
+    
+      containers.forEach(container => {
+          // Ensure the container can hold absolute elements
+          container.style.position = 'relative'; 
+          container.style.overflowX = 'hidden';
+          
+          // Get the glow configurations (Parsed from a string)
+          const glowConfigs = JSON.parse(container.dataset.glows);
+
+          glowConfigs.forEach(config => {
+              const glow = document.createElement('div');
+              
+              // Default styles combined with custom config
+              Object.assign(glow.style, {
+                  position: 'absolute',
+                  borderRadius: '50%',
+                  pointerEvents: 'none',
+                  zIndex: config.zIndex || '-1',
+                  filter: `blur(${config.blur || '100px'})`,
+                  opacity: config.opacity || '0.4',
+                  width: config.width || '50vw',
+                  height: config.height || '50vh',
+                  background: `radial-gradient(circle, ${config.color} 0%, rgba(255,255,255,0) 70%)`,
+                  // Positioning logic
+                  top: config.top || 'auto',
+                  bottom: config.bottom || 'auto',
+                  left: config.left || 'auto',
+                  right: config.right || 'auto'
+              });
+
+              container.appendChild(glow);
+          });
+      });
+
+
 });
