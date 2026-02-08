@@ -7,24 +7,24 @@ window.Alpine = Alpine
 
 
 document.addEventListener('alpine:init', () => {
-Alpine.store('lightbox', {
+  Alpine.store('lightbox', {
     open: false,
     source: '',
     show(src) {
-        this.source = src;
-        this.open = true;
-        document.body.style.overflow = 'hidden'; // Stop scrolling
+      this.source = src;
+      this.open = true;
+      document.body.style.overflow = 'hidden'; // Stop scrolling
     },
     hide() {
-        this.open = false;
-        document.body.style.overflow = 'auto'; // Start scrolling
+      this.open = false;
+      document.body.style.overflow = 'auto'; // Start scrolling
     }
 
-    
-});
 
-// 2. Inject the Lightbox HTML into the Bottom of the Body
-    const lightboxHTML = `
+  });
+
+  // 2. Inject the Lightbox HTML into the Bottom of the Body
+  const lightboxHTML = `
         <div x-data x-cloak>
             <div x-show="$store.lightbox.open" 
                  class="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden"
@@ -62,7 +62,7 @@ Alpine.store('lightbox', {
         </div>
     `;
 
-    document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+  document.body.insertAdjacentHTML('beforeend', lightboxHTML);
 
   Alpine.data('functionalityFilter', () => ({
     activeTab: 'Planlegging & optimalisering',
@@ -136,6 +136,41 @@ Alpine.store('lightbox', {
           image: 'https://images.unsplash.com/photo-1452457750107-cd084dce177d?q=80&w=1101&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         },
       ]
+    }
+  ));
+
+  Alpine.data('spiderContactFormData', () => (
+    {
+      formData: { name: '', email: '', subject: '', message: '', privacy: false },
+      errors: {},
+      loading: false,
+      success: false,
+
+      validate() {
+        this.errors = {};
+        if (!this.formData.name) this.errors.name = 'Navn er påkrevd';
+        if (!this.formData.email) {
+          this.errors.email = 'E-post er påkrevd';
+        } else if (!/\S+@\S+\.\S+/.test(this.formData.email)) {
+          this.errors.email = 'Ugyldig e-postadresse';
+        }
+        if (!this.formData.privacy) this.errors.privacy = 'Du må godta personvernerklæringen';
+
+        return Object.keys(this.errors).length === 0;
+      },
+
+      submitForm() {
+        if (!this.validate()) return;
+
+        this.loading = true;
+        // Simulate API call
+        setTimeout(() => {
+          this.loading = false;
+          this.success = true;
+          // Reset form after success
+          this.formData = { name: '', email: '', subject: '', message: '', privacy: false };
+        }, 1500);
+      }
     }
   ));
 })
