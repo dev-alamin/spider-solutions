@@ -28,6 +28,12 @@ body {
   filter: grayscale(100%);
   opacity: 0.8;
 }
+@media (max-width:768px) {
+  .container{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 
 /* Homepage first two section  */
 .glow-blob {
