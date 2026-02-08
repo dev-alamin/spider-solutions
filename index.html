@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body x-data>
 
   <!-- First Two section e.g hero and result -->
   <div class="page-wrapper" style="position: relative; overflow: hidden;">
@@ -586,7 +586,8 @@
         class="w-full h-full object-cover spider__image-magnetic-animation" />
          -->
 
-      <img :src="openIndex !== null ? faqData[openIndex].image : '/images/technology-section-main.png'"
+      <img @click="$store.lightbox.show(faqData[openIndex].image)"
+       :src="openIndex !== null ? faqData[openIndex].image : '/images/technology-section-main.png'"
         alt="Technology visual" class="w-full h-full object-cover spider__image-magnetic-animation" />
 
     </div>

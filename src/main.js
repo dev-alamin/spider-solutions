@@ -7,6 +7,63 @@ window.Alpine = Alpine
 
 
 document.addEventListener('alpine:init', () => {
+Alpine.store('lightbox', {
+    open: false,
+    source: '',
+    show(src) {
+        this.source = src;
+        this.open = true;
+        document.body.style.overflow = 'hidden'; // Stop scrolling
+    },
+    hide() {
+        this.open = false;
+        document.body.style.overflow = 'auto'; // Start scrolling
+    }
+
+    
+});
+
+// 2. Inject the Lightbox HTML into the Bottom of the Body
+    const lightboxHTML = `
+        <div x-data x-cloak>
+            <div x-show="$store.lightbox.open" 
+                 class="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden"
+                 style="display: none;"
+                 @keydown.escape.window="$store.lightbox.hide()">
+                
+                <div x-show="$store.lightbox.open"
+                     x-transition:enter="transition ease-out duration-300"
+                     x-transition:enter-start="opacity-0"
+                     x-transition:enter-end="opacity-100"
+                     x-transition:leave="transition ease-in duration-200"
+                     class="absolute inset-0 bg-slate-950/60 backdrop-blur-xl"></div>
+
+                <button @click="$store.lightbox.hide()" 
+                        class="absolute top-6 right-6 p-3 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all z-[10000] group">
+                    <svg class="w-6 h-6 transform group-hover:rotate-90 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <div x-show="$store.lightbox.open"
+                     x-transition:enter="transition ease-out duration-300"
+                     x-transition:enter-start="opacity-0 scale-95 translate-y-4"
+                     x-transition:enter-end="opacity-100 scale-100 translate-y-0"
+                     x-transition:leave="transition ease-in duration-200"
+                     @click.away="$store.lightbox.hide()"
+                     class="relative max-w-[95vw] max-h-[90vh] z-10 p-2">
+                    <img :src="$store.lightbox.source" 
+                         class="rounded-2xl shadow-2xl border border-white/10 object-contain max-h-[85vh] mx-auto">
+                    <div class="mt-4 text-center">
+                        <span class="text-white/40 text-[10px] font-bold tracking-[0.2em] uppercase">Esc to close</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+
   Alpine.data('functionalityFilter', () => ({
     activeTab: 'Planlegging & optimalisering',
     categories: [
@@ -153,41 +210,45 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const containers = document.querySelectorAll('[data-glows]');
-  
-    if( ! containers ) return;
-    
-      containers.forEach(container => {
-          // Ensure the container can hold absolute elements
-          container.style.position = 'relative'; 
-          container.style.overflowX = 'hidden';
-          
-          // Get the glow configurations (Parsed from a string)
-          const glowConfigs = JSON.parse(container.dataset.glows);
 
-          glowConfigs.forEach(config => {
-              const glow = document.createElement('div');
-              
-              // Default styles combined with custom config
-              Object.assign(glow.style, {
-                  position: 'absolute',
-                  borderRadius: '50%',
-                  pointerEvents: 'none',
-                  zIndex: config.zIndex || '-1',
-                  filter: `blur(${config.blur || '100px'})`,
-                  opacity: config.opacity || '0.4',
-                  width: config.width || '50vw',
-                  height: config.height || '50vh',
-                  background: `radial-gradient(circle, ${config.color} 0%, rgba(255,255,255,0) 70%)`,
-                  // Positioning logic
-                  top: config.top || 'auto',
-                  bottom: config.bottom || 'auto',
-                  left: config.left || 'auto',
-                  right: config.right || 'auto'
-              });
+  if (!containers) return;
 
-              container.appendChild(glow);
-          });
+  containers.forEach(container => {
+    try {
+      container.style.position = 'relative';
+      container.style.overflow = 'hidden';
+
+      let rawData = container.dataset.glows;
+      let glowConfigs = JSON.parse(rawData);
+
+      // Force it into an array if the user only provided one object {}
+      if (!Array.isArray(glowConfigs)) {
+        glowConfigs = [glowConfigs];
+      }
+
+      glowConfigs.forEach(config => {
+        const glow = document.createElement('div');
+        Object.assign(glow.style, {
+          position: 'absolute',
+          borderRadius: '50%',
+          pointerEvents: 'none',
+          zIndex: config.zIndex || '-1',
+          filter: `blur(${config.blur || '100px'})`,
+          opacity: config.opacity || '0.4',
+          width: config.width || '50vw',
+          height: config.height || '50vh',
+          background: `radial-gradient(circle, ${config.color} 0%, rgba(255,255,255,0) 70%)`,
+          top: config.top || 'auto',
+          bottom: config.bottom || 'auto',
+          left: config.left || 'auto',
+          right: config.right || 'auto'
+        });
+        container.appendChild(glow);
       });
+    } catch (e) {
+      console.error("Glow initialization failed. Check your JSON format!", e);
+    }
+  });
 
 
 });

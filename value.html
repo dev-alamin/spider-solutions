@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body x-data>
 
     <!-- First Two section e.g hero and result -->
     <div class="page-wrapper" data-glows='[
@@ -24,7 +24,7 @@
     { "color": "#f7dc72", "top": "-10%", "right": "-20%", "height": "100vh" }
 ]'>
 
-        <div class="md:min-h-screen py-4 md:py-8">
+        <div class="">
             <!-- Header main nav  -->
             <nav class="container flex items-center justify-between px-12 py-6 mx-auto">
                 <div class="flex items-center gap-2">
@@ -93,7 +93,8 @@
 
                     <div class="lg:col-span-7">
                         <div class="relative rounded-[3rem] overflow-hidden shadow-2xl spider__image-reveal">
-                            <img src="images/healthcare-provider.png"
+                            <img @click="$store.lightbox.show('images/healthcare-provider.png')"
+                            src="images/healthcare-provider.png"
                                 alt="Healthcare provider smiling with elderly patient"
                                 class="w-full h-auto object-cover aspect-[4/3] spider__image-magnetic-animation" />
                         </div>

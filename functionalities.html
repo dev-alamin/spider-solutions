@@ -16,14 +16,15 @@
 
 </head>
 
-<body>
+<body x-data>
 
     <!-- First Two section e.g hero and result -->
-    <div class="page-wrapper" style="position: relative; overflow: hidden;">
-        <div class="glow-blob yellow-glow"></div>
-        <div class="glow-blob blue-glow"></div>
+    <div class="page-wrapper" data-glows='[
+    { "color": "#f7dc72", "top": "5%", "left": "-50%", "width": "100vw" },
+    { "color": "#88b9fa", "top": "50%", "right": "-20%", "height": "100vh" }
+]'>
 
-        <div class="md:min-h-screen">
+        <div>
             <!-- Header main nav  -->
             <nav class="container flex items-center justify-between px-12 py-6 mx-auto">
                 <div class="flex items-center gap-2">
@@ -34,13 +35,20 @@
                 </div>
 
                 <div
-                class="hidden md:flex items-center gap-2 bg-white/60 backdrop-blur-md p-2 rounded-full border border-gray-100 shadow-sm">
-                <a href="index.html" class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Hjem</a>
-                <a href="value.html" class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Om SPIDER</a>
-                <a href="functionalities.html" class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Funksjonalitet</a>
-                <a href="record.html" class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Nytte</a>
-                <a href="about.html" class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Teknologi</a>
-                          <a href="contact.html" class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Kontakt</a>
+                    class="hidden md:flex items-center gap-2 bg-white/60 backdrop-blur-md p-2 rounded-full border border-gray-100 shadow-sm">
+                    <a href="index.html"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Hjem</a>
+                    <a href="value.html"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Om
+                        SPIDER</a>
+                    <a href="functionalities.html"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Funksjonalitet</a>
+                    <a href="record.html"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Nytte</a>
+                    <a href="about.html"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Teknologi</a>
+                    <a href="contact.html"
+                        class="text-sm text-[#413934] font-medium hover:text-gray-500 px-6 py-3 rounded-3xl hover:bg-[#F1ECEA]">Kontakt</a>
                 </div>
 
                 <a href="#"
@@ -51,15 +59,19 @@
 
             <!-- Hero section  -->
             <section class="py-20 overflow-hidden">
-                <div class="mx-auto text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-serif font-light text-slate-900 mb-8">
+                <div class="max-w-4xl mx-auto text-center mb-16">
+                    <h2 class="reveal-type text-4xl md:text-5xl font-serif font-light text-slate-900 mb-8 leading-16">
                         Funksjonalitet bygget for virkeligheten i hjemmetjenesten
                     </h2>
-                    <p class="text-slate-600 leading-relaxed max-w-2xl mx-auto">
-                        SPIDER er ikke bare ruteoptimalisering. Det er et komplett planleggingssystem som håndterer hele
-                        kompleksiteten i hjemmetjenesten – samtidig. Funksjonaliteten er utviklet i tett samarbeid med
-                        kommuner og tilpasses løpende faktiske behov i drift.
-                    </p>
+                    <div class="reveal-text">
+                        <p class="text-slate-600 leading-relaxed mx-auto">
+                            SPIDER er ikke bare ruteoptimalisering. Det er et komplett planleggingssystem som håndterer
+                            hele
+                            kompleksiteten i hjemmetjenesten – samtidig. Funksjonaliteten er utviklet i tett samarbeid
+                            med
+                            kommuner og tilpasses løpende faktiske behov i drift.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="flex swiper functionalities-slider gap-6 overflow-x-auto pb-12 snap-x no-scrollbar">
@@ -305,96 +317,104 @@
             <!-- Hero section ends  -->
         </div>
 
+        <!-- Core Areas  -->
+        <section class="py-24">
+            <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="reveal-type text-4xl md:text-5xl font-serif font-light text-slate-900 leading-tight">
+                        Fire kjerneområder som dekker hele <br class="hidden md:block"> hverdagen i hjemmetjenesten
+                    </h2>
+                </div>
+
+                <div class="reveal-grid grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <div
+                        class="reveal-card bg-white p-10 rounded-[1.5rem] shadow-sm flex flex-col items-start space-y-6">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                            <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                            </svg>
+                        </div>
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-serif font-light">Planlegging og optimalisering</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                SPIDER genererer komplette arbeidslister og ruter ved å optimalisere alle relevante
+                                hensyn
+                                samtidig. Systemet vurderer store mengder kombinasjoner for å sikre best mulig kvalitet
+                                i
+                                planene – hver dag.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="reveal-card bg-white p-10 rounded-[2.5rem] shadow-sm flex flex-col items-start space-y-6">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                            <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                            </svg>
+                        </div>
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-serif font-light">Kompetanse, roller og kvalitet</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                Systemet sikrer at riktig kompetanse er tilgjengelig der det trengs, uten manuelle
+                                kontroller. Kontinuitet, roller og lokale føringer bygges direkte inn i planleggingen.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="reveal-card bg-white p-10 rounded-[2.5rem] shadow-sm flex flex-col items-start space-y-6">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                            <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                            </svg>
+                        </div>
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-serif font-light">Regler, pauser og arbeidsflyt</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                SPIDER håndterer arbeidsmiljøkrav, pauser og lokale regler automatisk. Dette sikrer
+                                lovlige
+                                og gjennomførbare planer – uten etterarbeid.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="reveal-card bg-white p-10 rounded-[2.5rem] shadow-sm flex flex-col items-start space-y-6">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                            <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                            </svg>
+                        </div>
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-serif font-light">Fleksibilitet og integrasjoner</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                Løsningen er bygget for å fungere i eksisterende systemlandskap og tilpasses lokale
+                                behov.
+                                Endringer i løpet av dagen håndteres uten å bryte planene.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Core Areas ends  -->
+
     </div>
     <!-- First Two section e.g hero and result -->
 
-    <!-- Core Areas  -->
-    <section class="bg-[#faf7f2] py-24 px-6">
-        <div class="container mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-serif font-light text-slate-900 leading-tight">
-                    Fire kjerneområder som dekker hele <br class="hidden md:block"> hverdagen i hjemmetjenesten
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                <div class="bg-white p-10 rounded-[1.5rem] shadow-sm flex flex-col items-start space-y-6">
-                    <div class="bg-slate-50 p-4 rounded-xl">
-                        <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                        </svg>
-                    </div>
-                    <div class="space-y-4">
-                        <h3 class="text-2xl font-serif font-light">Planlegging og optimalisering</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed">
-                            SPIDER genererer komplette arbeidslister og ruter ved å optimalisere alle relevante hensyn
-                            samtidig. Systemet vurderer store mengder kombinasjoner for å sikre best mulig kvalitet i
-                            planene – hver dag.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-10 rounded-[2.5rem] shadow-sm flex flex-col items-start space-y-6">
-                    <div class="bg-slate-50 p-4 rounded-xl">
-                        <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                        </svg>
-                    </div>
-                    <div class="space-y-4">
-                        <h3 class="text-2xl font-serif font-light">Kompetanse, roller og kvalitet</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed">
-                            Systemet sikrer at riktig kompetanse er tilgjengelig der det trengs, uten manuelle
-                            kontroller. Kontinuitet, roller og lokale føringer bygges direkte inn i planleggingen.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-10 rounded-[2.5rem] shadow-sm flex flex-col items-start space-y-6">
-                    <div class="bg-slate-50 p-4 rounded-xl">
-                        <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                        </svg>
-                    </div>
-                    <div class="space-y-4">
-                        <h3 class="text-2xl font-serif font-light">Regler, pauser og arbeidsflyt</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed">
-                            SPIDER håndterer arbeidsmiljøkrav, pauser og lokale regler automatisk. Dette sikrer lovlige
-                            og gjennomførbare planer – uten etterarbeid.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-10 rounded-[2.5rem] shadow-sm flex flex-col items-start space-y-6">
-                    <div class="bg-slate-50 p-4 rounded-xl">
-                        <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                        </svg>
-                    </div>
-                    <div class="space-y-4">
-                        <h3 class="text-2xl font-serif font-light">Fleksibilitet og integrasjoner</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed">
-                            Løsningen er bygget for å fungere i eksisterende systemlandskap og tilpasses lokale behov.
-                            Endringer i løpet av dagen håndteres uten å bryte planene.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- Core Areas ends  -->
-
     <!-- Optimization Section  -->
-    <section class="bg-[#faf7f2] py-24 px-6">
+    <section class="bg-[#faf7f2] py-24">
         <div class="container mx-auto">
 
             <div class="text-center mb-20 space-y-4">
-                <h2 class="text-4xl md:text-5xl font-serif font-light text-slate-900">
+                <h2 class="reveal-type text-4xl md:text-5xl font-serif font-light text-slate-900">
                     Optimalisering der det faktisk betyr noe
                 </h2>
                 <p class="text-slate-600 max-w-3xl mx-auto">
@@ -402,9 +422,9 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="reveal-grid grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-                <div class="bg-white p-10 rounded-[1.5rem] shadow-sm flex flex-col h-full">
+                <div class="reveal-card bg-white p-10 rounded-[1.5rem] shadow-sm flex flex-col h-full">
                     <div class="bg-slate-50 w-12 h-12 rounded-xl flex items-center justify-center mb-8">
                         <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -466,7 +486,7 @@
                     </ul>
                 </div>
 
-                <div class="bg-white p-10 rounded-[1.5rem] shadow-sm flex flex-col h-full">
+                <div class="reveal-card bg-white p-10 rounded-[1.5rem] shadow-sm flex flex-col h-full">
                     <div class="bg-slate-50 w-12 h-12 rounded-xl flex items-center justify-center mb-8">
                         <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -528,7 +548,7 @@
                     </ul>
                 </div>
 
-                <div class="bg-white p-10 rounded-[1.5rem] shadow-sm flex flex-col h-full">
+                <div class="reveal-card bg-white p-10 rounded-[1.5rem] shadow-sm flex flex-col h-full">
                     <div class="bg-slate-50 w-12 h-12 rounded-xl flex items-center justify-center mb-8">
                         <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -596,23 +616,28 @@
     <!-- Optimization Section ends  -->
 
     <!-- Develop section  -->
-    <section class="bg-[#efebe6] py-20 px-6 md:px-20 rounded-[3rem] mx-4 my-10">
+    <section class="bg-[#efebe6] py-20 md:px-20 rounded-[2rem] my-10">
         <div class="container mx-auto flex flex-col lg:flex-row items-center gap-16">
 
             <div class="lg:w-1/2 space-y-8">
-                <h2 class="text-4xl md:text-5xl font-serif font-light text-slate-900 leading-tight">
+                <h2 class="reveal-type text-4xl md:text-5xl font-serif font-light text-slate-900 leading-tight">
                     Utviklet sammen med kommunene
                 </h2>
-                <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-                    SPIDER er utviklet i tett samarbeid med hjemmetjenester over hele landet. Funksjonaliteten bygges på
-                    faktiske behov i drift, ikke teoretiske antakelser. Innspill fra brukere prioriteres fortløpende og
-                    omsettes til konkrete forbedringer – slik at løsningen hele tiden utvikler seg i takt med kommunenes
-                    hverdag.
-                </p>
+                <div class="reveal-text">
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                        SPIDER er utviklet i tett samarbeid med hjemmetjenester over hele landet. Funksjonaliteten
+                        bygges på
+                        faktiske behov i drift, ikke teoretiske antakelser. Innspill fra brukere prioriteres fortløpende
+                        og
+                        omsettes til konkrete forbedringer – slik at løsningen hele tiden utvikler seg i takt med
+                        kommunenes
+                        hverdag.
+                    </p>
+                </div>
 
                 <div class="pt-4">
                     <button
-                        class="group flex items-center gap-3 bg-[#111111] hover:bg-slate-800 text-white px-8 py-4 rounded-full transition-all">
+                        class="reveal-button group flex items-center gap-3 bg-[#111111] hover:bg-slate-800 text-white px-8 py-4 rounded-full transition-all">
                         <span class="bg-white rounded-full p-1 group-hover:translate-x-1 transition-transform">
                             <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
@@ -624,21 +649,25 @@
                 </div>
             </div>
 
-            <div class="lg:w-1/2 relative">
-                <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl group cursor-pointer"
-                    @click="isOpen = true">
-                    <img src="images/functionalities-consult.png" alt="Collaborative meeting"
-                        class="w-full h-[400px] md:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" />
 
+            <div class="lg:w-1/2 relative">
+                <div @click="$store.lightbox.show('images/functionalities-consult.png')"
+                    class="spider__image-reveal relative rounded-[2.5rem] overflow-hidden shadow-2xl group cursor-pointer">
+                    <img src="images/functionalities-consult.png" alt="Collaborative meeting"
+                        class="spider__image-magnetic-animation w-full h-[400px] md:h-[500px] object-cover group-hover:scale-105" />
                 </div>
             </div>
+        </div>
+
         </div>
     </section>
     <!-- Develop section ends  -->
 
     <!-- Integration section  -->
-    <section class="relative bg-[#faf7f2] py-24 px-6 overflow-hidden min-h-[800px] flex items-center justify-center">
-
+    <section class="relative py-24 px-6 overflow-hidden min-h-[800px] flex items-center justify-center" data-glows='[
+    { "color": "#f7dc72", "top": "5%", "left": "-50%", "width": "100vw" },
+    { "color": "#88b9fa", "top": "50%", "right": "-20%", "height": "100vh" }
+]'>
         <div class="relative z-10 text-center max-w-2xl pointer-events-auto">
             <span
                 class="inline-block px-4 py-1 mb-6 text-[10px] font-bold tracking-[0.2em] uppercase bg-white/50 text-slate-500 rounded border border-slate-200 backdrop-blur-sm">
@@ -868,8 +897,10 @@
             </div>
         </div>
     </footer>
+
     <!-- Footer ends  -->
     <script type="module" src="/src/main.js"></script>
+
 </body>
 
 </html>

@@ -22,7 +22,7 @@ body {
   display: flex;
   flex-col: column;
 }
-
+[x-cloak] { display: none !important; }
 /* Ensure the grayscale filter matches the Figma avatars */
 .avatar-grayscale {
   filter: grayscale(100%);
