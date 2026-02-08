@@ -19,8 +19,12 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                // blog: resolve(__dirname, 'blog.html'),
-                // blogDetails: resolve(__dirname, 'blog-details.html'),
+                about: resolve(__dirname, 'about.html'),
+                contact: resolve(__dirname, 'contact.html'),
+                functionalities: resolve(__dirname, 'functionalities.html'),
+                record: resolve(__dirname, 'record.html'),
+                value: resolve(__dirname, 'value.html'),
+
             },
             output: {
                 // Clean file names for buyers to understand

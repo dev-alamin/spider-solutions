@@ -28,6 +28,13 @@ body {
   filter: grayscale(100%);
   opacity: 0.8;
 }
+
+.swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
 @media (max-width:768px) {
   .container{
     padding-left: 15px;
