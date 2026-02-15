@@ -25,94 +25,6 @@ export const initGSAPAnimations = () => {
         }
     });
 
-    // ScrollSmoother.create({
-    //     wrapper: "#smooth-wrapper",
-    //     content: "#smooth-content",
-    //     smooth: 1.5,               // How long it takes to "catch up" to your scroll
-    //     effects: true,             // Allows data-speed="1.2" on HTML elements
-    //     smoothTouch: 0.1,           // Adds a tiny bit of smoothing to mobile touch
-    //     normalizeScroll: false,
-    //     ignoreMobileResize: true,
-    // });
-
-    // 1. Hero Content Entrance with ScrollTrigger
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".corner-hero-content", // The main container for your hero
-            start: "top 80%",               // Start when the top of hero is 80% from the top
-            toggleActions: "restart none restart reset", // Restarts when coming back from the top
-        },
-        opacity: 0,
-        filter: "blur(10px)",
-        defaults: { ease: "power3.out", duration: 1 }
-    });
-
-    tl.from(".corner__hero-top-title", { opacity: 0, y: 20, delay: 0.2 })
-        .from(".corner__hero-title", { opacity: 0, y: 30 }, "-=0.7")
-        .from(".corner-hero-content p", { opacity: 0, y: 20 }, "-=0.7")
-        .from(".corner__hero-buttons", { opacity: 0, y: 20 }, "-=0.7");
-
-    // 2. The "Dashboard Reveal" Scroll Effect
-    // This makes the feature image grow as the user scrolls into it
-    gsap.fromTo(".feature-image-container",
-        {
-            y: 100,
-            scale: 0.8,
-            opacity: 0.4
-        },
-        {
-            y: 0,
-            scale: 1,
-            opacity: 1,
-            scrollTrigger: {
-                trigger: ".feature-image-container",
-                start: "top 80%", // Starts when the top of the image hits 90% of viewport
-                end: "top 30%",   // Finishes when it hits the middle
-                scrub: 1,         // Smoothly ties animation to scroll speed
-            }
-        }
-    );
-
-    // Fade in Author slightly after
-    // Target the reveal-item classes inside your content box
-    gsap.from(".corner__testimonial-content-box .reveal-item", {
-        scrollTrigger: {
-            trigger: ".corner__testimonial-content-box",
-            start: "top 80%", // Starts when the box enters view
-        },
-        opacity: 0,
-        y: 40,             // Slides up 40px
-        duration: 1.2,     // Slow reveal
-        stagger: 0.3,      // Quote first, then Sophia Lee
-        ease: "power2.out"
-    });
-
-    // 2. Text Reveal on Page Load
-    const heroTl = gsap.timeline({ delay: 0.5 });
-
-    heroTl.from(".hero-star-reveal span", {
-        y: 20,
-        opacity: 0,
-        stagger: 0.1,
-        ease: "back.out(1.7)"
-    })
-        .from(".hero-quote-reveal", {
-            y: 50,
-            opacity: 0,
-            skewY: 3,
-            duration: 1.2,
-            ease: "power4.out"
-        }, "-=0.5")
-        .to(".hero-author-reveal", {
-            y: 0,
-            opacity: 1,
-            duration: 0.8,
-            ease: "power2.out"
-        }, "-=0.8");
-
-    // Trusted by team section animations
-
-
     // --- 1. GLOBAL HEADINGS (.reveal-type) ---
     const headings = document.querySelectorAll('.reveal-type');
     headings.forEach((heading) => {
@@ -129,7 +41,7 @@ export const initGSAPAnimations = () => {
                 trigger: heading,
                 start: 'top 90%', // Starts when heading is 85% from top of viewport
                 end: 'bottom 10%',
-                toggleActions: 'restart none restart none',
+                toggleActions: 'restart none none none',
             },
             y: 100,              // Slide up from 100px
             opacity: 0,          // Fade in
@@ -158,7 +70,7 @@ export const initGSAPAnimations = () => {
             scrollTrigger: {
                 trigger: grid,
                 start: "top 80%",
-                toggleActions: "restart none restart none"
+                toggleActions: "restart none none none"
             }
         });
     });
@@ -180,7 +92,7 @@ export const initGSAPAnimations = () => {
             scrollTrigger: {
                 trigger: counter,
                 start: "top 90%",
-                toggleActions: "restart none restart none",
+                toggleActions: "restart none none none",
             },
             onUpdate: function () {
                 // Keep the suffix (%, M, +) during the count
@@ -201,7 +113,7 @@ export const initGSAPAnimations = () => {
             scrollTrigger: {
                 trigger: btn,
                 start: "top 95%", // Trigger as soon as it nears the screen
-                toggleActions: "restart none restart none"
+                toggleActions: "restart none none none"
             }
         });
     });
@@ -217,7 +129,7 @@ export const initGSAPAnimations = () => {
         scrollTrigger: {
             trigger: ".reveal-faq-list",
             start: "top 85%",
-            toggleActions: "restart none restart none"
+            toggleActions: "restart none none none"
         }
     });
 
@@ -237,7 +149,7 @@ export const initGSAPAnimations = () => {
             scrollTrigger: {
                 trigger: reveal,
                 start: "top 90%",
-                toggleActions: "restart none restart none"
+                toggleActions: "restart none none none"
             }
         });
     });
@@ -286,7 +198,7 @@ export const initGSAPAnimations = () => {
             scrollTrigger: {
                 trigger: list,
                 start: "top 85%", // Starts when the list is 85% from the top
-                toggleActions: "restart none restart none"
+                toggleActions: "restart none none none"
             },
             y: 30,
             opacity: 0,
@@ -369,7 +281,7 @@ export const initGSAPAnimations = () => {
             scrollTrigger: {
                 trigger: p,
                 start: "top 85%", // Starts when the paragraph enters the bottom 15% of screen
-                toggleActions: "restart none restart none", // Plays once
+                toggleActions: "restart none none none", // Plays once
             }
         });
     });
