@@ -27,6 +27,9 @@ export default defineConfig({
 
             },
             output: {
+                manualChunks: {
+                'vendor': ['alpinejs', '@alpinejs/collapse', 'gsap', 'lenis', 'swiper'],
+                },
                 // Clean file names for buyers to understand
                 entryFileNames: `assets/js/[name].js`,
                 chunkFileNames: `assets/js/[name].js`,
@@ -34,7 +37,8 @@ export default defineConfig({
             },
         },
         // Minification settings
-        minify: 'terser',
+        // minify: 'terser',
+        minify:false,
         terserOptions: {
             compress: {
                 drop_console: true, // Professional requirement

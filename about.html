@@ -21,11 +21,10 @@
 <body>
 
     <!-- First Two section e.g hero and result -->
-    <div class="page-wrapper" style="position: relative; overflow: hidden;">
-        <div class="glow-blob yellow-glow"></div>
-        <div class="glow-blob blue-glow"></div>
-
-        <div class="md:min-h-screen">
+    <div class="page-wrapper" data-glows='[
+    { "color": "#f7dc72", "top": "45%", "left": "-50%", "width": "100vw" },
+    { "color": "#88b9fa", "top": "60%", "right": "-30%", "height": "100vh" }
+]'>
 
             <nav x-data="{ mobileMenuOpen: false }"
                 class="container relative flex items-center justify-between px-6 md:px-12 py-6 mx-auto">
@@ -146,14 +145,12 @@
             </nav>
 
             <section class="relative w-full py-20 overflow-hidden">
-
-                <div class="absolute inset-0 opacity-40 pointer-events-none">
+                <div class="container mx-auto px-6 relative z-10">
+                    <div class="absolute inset-0 opacity-40 pointer-events-none">
                     <img src="images/map-bg.png" alt="Background Map"
-                        class="w-full h-full object-cover object-center scale-110">
+                        class="w-full h-auto object-cover object-center scale-110">
                 </div>
 
-
-                <div class="container mx-auto px-6 relative z-10">
                     <div class="md:flex md:gap-16">
                         <div class="mb-12 max-w-3xl">
                             <h2
@@ -162,17 +159,17 @@
                             </h2>
                         </div>
 
-                        <div class="relative mt-8 md:ml-8" x-data="{ show: true }">
+                        <div class="relative mt-16 md:ml-8" x-data="{ show: true }">
 
                             <div
-                                class="absolute -top-10 left-[48%] transform -translate-x-1/2 flex items-center justify-center">
+                                class="absolute top-15 left-25 transform -translate-x-1/2 flex items-center justify-center">
                                 <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
                                     <div class="w-4 h-4 bg-yellow-400 rounded-full animate-pulse shadow-sm"></div>
                                 </div>
                             </div>
 
                             <div
-                                class="ml-auto mr-0 md:mr-20 max-w-md bg-white backdrop-blur-sm p-8 md:p-10 rounded-2xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)]">
+                                class="md:ml-[8rem] mr-0 md:mr-20 md:mt-[6rem] max-w-md bg-white backdrop-blur-sm p-8 md:p-10 rounded-2xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)]">
                                 <div class="space-y-6 reveal-text">
                                     <p class="text-[15px] leading-relaxed text-[#1a1a1a]">
                                         <span class="font-bold">SPIDER</span> brukes daglig i norske kommuner – og
@@ -189,6 +186,7 @@
                             </div>
 
                         </div>
+                        
                     </div>
 
                     <div class="mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10 mt-32">
@@ -351,13 +349,13 @@
 
                 </div>
             </section>
-        </div>
+        
 
-    </div>
+    
     <!-- First Two section e.g hero and result -->
 
     <!-- Result section  -->
-    <section class="bg-slate-50 py-20 font-sans" x-data="{ openTab: 1 }">
+    <section class="py-20 font-sans" x-data="{ openTab: 1 }">
         <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
             <div class="bg-[#f2f1ef] px-4 py-8 md:p-12 rounded-[40px] space-y-4">
@@ -471,16 +469,17 @@
         </div>
     </section>
     <!-- result section ends  -->
+     </div>
 
     <!-- Process section  -->
-    <section class="bg-[#f9f8f6] py-24 font-sans">
+    <section class="py-24 font-sans">
         <div class="container mx-auto">
 
             <div class="flex flex-col items-center mb-16">
                 <div class="w-full h-px bg-slate-200 relative mb-8">
                     <div
-                        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white border border-slate-100 shadow-sm rounded-full p-3 z-10">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-400" fill="none"
+                        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-16 bg-white border border-slate-100 shadow-sm rounded-full p-3 z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-400 mt-2" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -1164,7 +1163,10 @@
     <!-- Call to action Section ends  -->
 
     <!-- Footer statrs  -->
-    <footer class="bg-[#F4F3F5] pb-12 border-t border-gray-100 font-sans">
+    <footer class="pb-12 border-t border-gray-100 font-sans" data-glows='[
+    { "color": "#f7dc72", "top": "60%", "right": "-50%", "width": "100%" },
+    { "color": "#D8E4FF", "top": "-50%", "right": "-30%", "height": "100%" }
+]'>
 
         <div class="border-b border-gray-200 py-12">
             <div class="container mx-auto px-12 md:pl-12">
@@ -1184,9 +1186,9 @@
 
                     <div class="space-y-4 max-w-md">
                         <div
-                            class="p-3 md:p-6 rounded-[24px] border border-gray-300 flex items-center gap-6 transition-all hover:bg-white hover:shadow-xl hover:shadow-gray-200/40 group">
+                            class="p-3 md:p-4 rounded-[15px] border border-gray-300 flex items-center gap-6 transition-all hover:bg-white hover:shadow-xl hover:shadow-gray-200/40 group">
                             <div
-                                class="w-14 h-14 bg-[#FFE587] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm transition-transform group-hover:scale-105">
+                                class="w-12 h-12 bg-[#FFE587] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm transition-transform group-hover:scale-105">
                                 <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
                                     <path
                                         d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27c1.12.45 2.33.69 3.58.69a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.24 2.46.69 3.58a1 1 0 01-.27 1.11l-2.2 2.2z" />
@@ -1197,9 +1199,9 @@
                         </div>
 
                         <div
-                            class="p-3 md:p-6 rounded-[24px] border border-gray-300 flex items-center gap-6 transition-all hover:bg-white hover:shadow-xl hover:shadow-gray-200/40 group">
+                            class="p-3 md:p-4 rounded-[15px] border border-gray-300 flex items-center gap-6 transition-all hover:bg-white hover:shadow-xl hover:shadow-gray-200/40 group">
                             <div
-                                class="w-14 h-14 bg-[#FFE587] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm transition-transform group-hover:scale-105">
+                                class="w-12 h-12 bg-[#FFE587] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm transition-transform group-hover:scale-105">
                                 <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
                                     <path
                                         d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
@@ -1210,9 +1212,9 @@
                         </div>
 
                         <div
-                            class="p-3 md:p-6 rounded-[24px] border border-gray-300 flex items-center gap-6 transition-all hover:bg-white hover:shadow-xl hover:shadow-gray-200/40 group">
+                            class="p-3 md:p-4 rounded-[15px] border border-gray-300 flex items-center gap-6 transition-all hover:bg-white hover:shadow-xl hover:shadow-gray-200/40 group">
                             <div
-                                class="w-14 h-14 bg-[#FFE587] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm transition-transform group-hover:scale-105">
+                                class="w-12 h-12 bg-[#FFE587] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm transition-transform group-hover:scale-105">
                                 <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
                                     <path
                                         d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
@@ -1250,7 +1252,7 @@
                 </div>
             </div>
 
-            <div class="pt-10 border-t border-gray-200/60 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="pt-10 flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="flex gap-4">
                     <a href="#"
                         class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm text-gray-900 hover:scale-110 transition-transform">
