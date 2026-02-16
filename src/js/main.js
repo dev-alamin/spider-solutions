@@ -1,18 +1,5 @@
-// import Swiper from 'swiper';
-import Swiper from 'swiper/bundle';
-import { Navigation, Pagination } from 'swiper/modules';
-// import styles bundle
-import 'swiper/css/bundle';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-import { initGSAPAnimations } from './scripts/animation'
-
-import collapse from '@alpinejs/collapse'
-
-import Alpine from 'alpinejs';
-window.Alpine = Alpine;
-Alpine.plugin(collapse);
+import './vendor';
+import sliderJs from './modules/slider';
 
 document.addEventListener('alpine:init', () => {
   Alpine.store('lightbox', {
@@ -187,76 +174,7 @@ Alpine.start();
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  initGSAPAnimations();
-
-  new Swiper('.testimonial-swiper', {
-    modules: [Navigation, Pagination],
-    slidesPerView: 1.1, // Shows a piece of the next slide on mobile
-    spaceBetween: 30,
-    grabCursor: true,
-    loop: true, // Recommended to keep "left edge" logic simple
-    // mousewheel: true,
-    freeMode: true,
-    navigation: {
-      nextEl: '.swiper-next-btn',
-      prevEl: '.swiper-prev-btn',
-    },
-    autoplay: {
-      delay: 3000, // 3 seconds
-      disableOnInteraction: false, // Continue after interaction
-    },
-    speed: 500,
-    breakpoints: {
-      768: {
-        slidesPerView: 2.2,
-      },
-      1280: {
-        slidesPerView: 3, // Matches the 3-column Figma look
-      },
-    },
-  });
-
-  new Swiper('.value-swiper', {
-    modules: [Navigation, Pagination],
-    slidesPerView: 1.2,
-    spaceBetween: 24,
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-next-custom',
-      prevEl: '.swiper-prev-custom',
-    },
-    autoplay: {
-      delay: 3000, // 3 seconds
-      disableOnInteraction: false, // Continue after interaction
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 2.2,
-      },
-      1024: {
-        slidesPerView: 2.9,
-      },
-    },
-  });
-
-  new Swiper('.functionalities-slider', {
-    slidesPerView: 'auto',
-    spaceBetween: 24,
-    centeredSlides: true,
-    loop: true,
-    speed: 5000,
-    allowTouchMove: false,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: true,
-    },
-
-    freeMode: true, // Crucial for ticker effect
-    // breakpoints: {
-    //   640: { slidesPerView: 2.2 },
-    //   1024: { slidesPerView: 5.5 },
-    // },
-  });
+  sliderJs();
 
   const containers = document.querySelectorAll('[data-glows]');
 

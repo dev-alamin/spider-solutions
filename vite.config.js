@@ -1,52 +1,54 @@
-import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
-import {resolve} from 'path';
+import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
+import { resolve } from 'path';
 
 export default defineConfig({
-      plugins: [
-    tailwindcss(),
-  ],
-    // Set base to relative so the project works in any sub-folder
-    base: './',
+  plugins: [tailwindcss()],
+  base: './',
 
-    build: {
-        // Generates a manifest for easier WP conversion later
-        manifest: true,
-        outDir: 'dist',
-        assetsDir: 'assets',
-        // Ensures small images are not inlined as base64 (ThemeForest prefers files)
-        assetsInlineLimit: 0,
-        rollupOptions: {
-            input: {
-                main: resolve(__dirname, 'index.html'),
-                about: resolve(__dirname, 'about.html'),
-                contact: resolve(__dirname, 'contact.html'),
-                functionalities: resolve(__dirname, 'functionalities.html'),
-                record: resolve(__dirname, 'record.html'),
-                value: resolve(__dirname, 'value.html'),
+  build: {
+    manifest: true,
+    outDir: 'dist',
+    assetsDir: 'assets',
+    assetsInlineLimit: 0,
+    minify: false, // Keep custom JS readable
 
-            },
-            output: {
-                manualChunks: {
-                'vendor': ['alpinejs', '@alpinejs/collapse', 'gsap', 'lenis', 'swiper'],
-                },
-                // Clean file names for buyers to understand
-                entryFileNames: `assets/js/[name].js`,
-                chunkFileNames: `assets/js/[name].js`,
-                assetFileNames: `assets/[ext]/[name].[ext]`,
-            },
+    rollupOptions: {
+      // Multiple entry points for HTML + JS modules
+      input: {
+        // HTML pages
+        main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'about.html'),
+        contact: resolve(__dirname, 'contact.html'),
+        functionalities: resolve(__dirname, 'functionalities.html'),
+        record: resolve(__dirname, 'record.html'),
+        value: resolve(__dirname, 'value.html'),
+
+        'custom-logic': resolve(__dirname, 'src/js/main.js'),
+        'slider-init': resolve(__dirname, 'src/js/modules/slider.js'),
+      },
+      output: {
+        // Keep readable & clean filenames for buyers
+        entryFileNames: 'assets/js/[name].js',
+        chunkFileNames: 'assets/js/[name].js',
+        assetFileNames: 'assets/[ext]/[name].[ext]',
+
+        // Separate vendor chunk (locked)
+        manualChunks: {
+          vendor: ['alpinejs', '@alpinejs/collapse', 'gsap', 'lenis', 'swiper'],
         },
-        // Minification settings
-        // minify: 'terser',
-        minify:false,
-        terserOptions: {
-            compress: {
-                drop_console: true, // Professional requirement
-                drop_debugger: true,
-            },
-        },
+      },
     },
-    server: {
-        port: 3000,
+
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
     },
+  },
+
+  server: {
+    port: 3000,
+  },
 });

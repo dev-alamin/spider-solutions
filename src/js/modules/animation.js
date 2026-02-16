@@ -296,3 +296,5 @@ export const initGSAPAnimations = () => {
         ease: "power2.out"
     });
 }
+
+initGSAPAnimations();
